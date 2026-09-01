@@ -10,6 +10,8 @@ export const translations = {
       stack: "Stack",
       contact: "Contacto",
       cta: "Contactar",
+      open_menu: "Abrir menú de navegación",
+      close_menu: "Cerrar menú de navegación",
     },
     hero: {
       badge: "Socio en Cooperativa Tera • Rosario, AR",
@@ -104,6 +106,8 @@ export const translations = {
       stack: "Stack",
       contact: "Contact",
       cta: "Get in Touch",
+      open_menu: "Open navigation menu",
+      close_menu: "Close navigation menu",
     },
     hero: {
       badge: "Partner at Cooperativa Tera • Rosario, AR",

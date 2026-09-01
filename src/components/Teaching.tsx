@@ -8,7 +8,7 @@ export default function Teaching() {
   return (
     <section id="docencia" className="space-y-4 scroll-mt-20">
       <div>
-        <span className="font-mono text-xs font-semibold uppercase tracking-wider text-brand">
+        <span className="font-mono text-xs font-semibold uppercase tracking-wider text-brand dark:text-[#7ba1ee]">
           {t("teaching", "tag")}
         </span>
         <h2 className="mt-1 text-2xl font-bold text-slate-900 sm:text-3xl dark:text-white">
@@ -21,18 +21,18 @@ export default function Teaching() {
           <h3 className="text-sm font-bold text-slate-900 dark:text-white">
             {t("teaching", "role")}
           </h3>
-          <span className="font-mono text-xs text-slate-500">Mayo 2021 – Actualidad</span>
+          <span className="font-mono text-xs text-slate-500 dark:text-slate-400">Mayo 2021 – Actualidad</span>
         </div>
 
         <div className="flex flex-wrap items-center justify-between gap-2">
-          <span className="text-xs font-semibold text-brand">
+          <span className="text-xs font-semibold text-brand dark:text-[#7ba1ee]">
             Instituto Superior Particular N° 4038 «Juan Pablo II» (Roldán, Santa Fe)
           </span>
           <a
             href="https://github.com/acosta4038"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 font-mono text-xs text-slate-500 transition-colors hover:text-brand"
+            className="flex items-center gap-1 font-mono text-xs text-slate-600 transition-colors hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-400 dark:hover:text-[#7ba1ee]"
           >
             <GithubIcon className="h-3.5 w-3.5" /> github.com/acosta4038
           </a>
@@ -47,7 +47,7 @@ export default function Teaching() {
               <strong className="mb-0.5 block text-slate-900 dark:text-white">
                 {subject.name}
               </strong>
-              <p className="text-[11px] text-slate-500 dark:text-slate-400">
+              <p className="text-[11px] text-slate-600 dark:text-slate-300">
                 {t("teaching", subject.descKey)}
               </p>
             </div>

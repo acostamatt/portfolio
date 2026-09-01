@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="flex flex-wrap items-center gap-4 pt-2 text-sm font-medium">
           <a
             href="#proyectos"
-            className="flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-white transition-colors hover:bg-brand-hover"
+            className="flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-white transition-colors hover:bg-brand-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
           >
             <span>{t("hero", "cta_projects")}</span>
             <ArrowRight size={14} />
@@ -36,7 +36,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               title="GitHub Personal"
-              className="flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3.5 py-2 font-mono text-xs text-slate-700 transition-colors hover:border-brand dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
+              className="flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3.5 py-2 font-mono text-xs text-slate-700 transition-colors hover:border-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
             >
               <GithubIcon className="h-4 w-4" /> acostamatt
             </a>
@@ -45,7 +45,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               title="LinkedIn"
-              className="flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3.5 py-2 font-mono text-xs text-slate-700 transition-colors hover:border-brand dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
+              className="flex items-center gap-1.5 rounded-lg border border-slate-300 bg-white px-3.5 py-2 font-mono text-xs text-slate-700 transition-colors hover:border-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
             >
               <LinkedinIcon className="h-4 w-4" /> acostamati
             </a>

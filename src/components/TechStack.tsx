@@ -30,7 +30,7 @@ export default function TechStack() {
   return (
     <section id="stack" className="space-y-4 scroll-mt-20">
       <div>
-        <span className="font-mono text-xs font-semibold uppercase tracking-wider text-brand">
+        <span className="font-mono text-xs font-semibold uppercase tracking-wider text-brand dark:text-[#7ba1ee]">
           {t("stack", "tag")}
         </span>
         <h2 className="mt-1 text-2xl font-bold text-slate-900 sm:text-3xl dark:text-white">
@@ -47,7 +47,7 @@ export default function TechStack() {
             <h3 className="mb-2 text-xs font-bold text-slate-900 dark:text-white">
               {t("stack", layer.layerKey)}
             </h3>
-            <ul className="space-y-1 font-mono text-xs text-slate-600 dark:text-slate-400">
+            <ul className="space-y-1 font-mono text-xs text-slate-600 dark:text-slate-300">
               {layer.items.map((item) => (
                 <li key={item}>• {item}</li>
               ))}

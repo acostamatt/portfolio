@@ -38,6 +38,9 @@ export interface Project {
   modalActionKey?: "btn_details" | "btn_arch" | "btn_private_summary";
   satellites?: SatelliteLink[];
   satellitesFooterKey?: "text_live_demos";
+  image?: string;
+  logo?: string;
+  company?: string;
 }
 
 export type ExperienceItemDescKey = "tera" | "danone" | "falabella";

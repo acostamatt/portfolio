@@ -44,26 +44,26 @@ export default function Footer() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 font-mono text-xs font-medium text-emerald-600 transition-colors hover:bg-emerald-500 hover:text-white dark:text-emerald-400"
+            className="flex items-center gap-1.5 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 font-mono text-xs font-medium text-emerald-600 transition-colors hover:bg-emerald-500 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 dark:text-emerald-400"
           >
             <WhatsappIcon className="h-3.5 w-3.5" /> {t("contact", "whatsapp")}
           </a>
 
-          <a
-            href={`mailto:${EMAIL}`}
+          <button
+            type="button"
             onClick={copyEmail}
-            className="flex items-center gap-1.5 rounded-lg border border-slate-300 px-3 py-1.5 font-mono text-xs text-slate-700 transition-colors hover:border-brand dark:border-slate-700 dark:text-slate-300"
+            className="flex items-center gap-1.5 rounded-lg border border-slate-300 px-3 py-1.5 font-mono text-xs text-slate-700 transition-colors hover:border-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:border-slate-700 dark:text-slate-300"
           >
             {copied ? <Check size={14} /> : <Mail size={14} />}
             {copied ? t("contact", "copied") : EMAIL}
-          </a>
+          </button>
 
           <a
             href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
             title="LinkedIn"
-            className="flex h-8 w-8 items-center justify-center rounded-lg border border-slate-300 text-slate-600 transition-colors hover:border-brand hover:text-brand dark:border-slate-700 dark:text-slate-300"
+            className="flex h-8 w-8 items-center justify-center rounded-lg border border-slate-300 text-slate-600 transition-colors hover:border-brand hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:border-slate-700 dark:text-slate-300 dark:hover:text-[#7ba1ee]"
           >
             <LinkedinIcon className="h-3.5 w-3.5" />
           </a>
@@ -71,7 +71,7 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-slate-200 bg-slate-100/60 p-3 text-xs dark:border-slate-800 dark:bg-slate-900/40">
-        <span className="font-mono text-slate-500">{t("contact", "repos")}</span>
+        <span className="font-mono text-slate-600 dark:text-slate-400">{t("contact", "repos")}</span>
         <div className="flex flex-wrap items-center gap-3 font-mono text-[11px]">
           {REPOS.map((repo, index) => (
             <span key={repo.href} className="flex items-center gap-3">
@@ -80,7 +80,7 @@ export default function Footer() {
                 href={repo.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 transition-colors hover:text-brand"
+                className="flex items-center gap-1 text-slate-700 transition-colors hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-300 dark:hover:text-[#7ba1ee]"
               >
                 <GithubIcon className="h-3 w-3" /> {repo.label}
               </a>

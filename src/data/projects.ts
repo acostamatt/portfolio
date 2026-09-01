@@ -11,6 +11,7 @@ export const projects: Project[] = [
     descKey: "proj_terasync",
     tech: ["Laravel", "React", "MQTT"],
     link: { href: "https://terasync.tera.ar/", labelKey: "link_live" },
+    company: "Cooperativa Tera",
   },
   {
     id: "danone",
@@ -23,6 +24,7 @@ export const projects: Project[] = [
     tech: ["Laravel", "Docker", "Gigya"],
     modal: "danone",
     modalActionKey: "btn_details",
+    company: "Devecoop / Danone",
   },
   {
     id: "odoo",
@@ -35,6 +37,7 @@ export const projects: Project[] = [
     tech: ["Python", "PostgreSQL", "AFIP/ARCA"],
     modal: "odoo",
     modalActionKey: "btn_arch",
+    company: "Cooperativa Tera",
   },
   {
     id: "estima",
@@ -47,6 +50,7 @@ export const projects: Project[] = [
     tech: ["React", "Business Engine"],
     modal: "estima",
     modalActionKey: "btn_private_summary",
+    company: "Enterprise Client",
   },
   {
     id: "agrorecetas",
@@ -58,6 +62,7 @@ export const projects: Project[] = [
     descKey: "proj_agro",
     tech: ["Laravel", "GIS Maps"],
     link: { href: "https://agrorecetas.test.tera.ar", labelKey: "link_demo" },
+    company: "Cooperativa Tera",
   },
   {
     id: "edducity",
@@ -69,6 +74,7 @@ export const projects: Project[] = [
     descKey: "proj_edducity",
     tech: ["PHP", "MySQL Tuning"],
     link: { href: "https://www.edducity.com", labelKey: "link_live" },
+    company: "Falabella",
   },
   {
     id: "tramite-digital",
@@ -80,6 +86,7 @@ export const projects: Project[] = [
     descKey: "proj_tramite",
     tech: ["MP API", "Laravel"],
     link: { href: "https://tramite.test.tera.ar/login", labelKey: "link_demo" },
+    company: "GovTech / Tera",
   },
   {
     id: "facturador",
@@ -91,6 +98,7 @@ export const projects: Project[] = [
     descKey: "proj_facturador",
     tech: ["AFIP WSFE", "PHP"],
     link: { href: "https://facturador.test.tera.ar/", labelKey: "link_demo" },
+    company: "Cooperativa Tera",
   },
   {
     id: "other-demos",
@@ -102,6 +110,7 @@ export const projects: Project[] = [
     titleKey: "other_title",
     descKey: "proj_other",
     tech: [],
+    company: "Cooperativa Tera",
     satellites: [
       { name: "Apps Tera", href: "https://apps.tera.coop.ar/" },
       { name: "Aprepa", href: "https://aprepa.test.tera.ar" },
