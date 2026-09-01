@@ -48,9 +48,10 @@ export const projects: Project[] = [
     title: "Estima",
     descKey: "proj_estima",
     tech: ["React", "Business Engine"],
+    link: { href: "https://estima.tera.ar", labelKey: "link_live" },
     modal: "estima",
     modalActionKey: "btn_private_summary",
-    company: "Enterprise Client",
+    company: "Cooperativa Tera",
   },
   {
     id: "agrorecetas",
