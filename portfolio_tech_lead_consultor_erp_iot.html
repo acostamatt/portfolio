@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matias Acosta | Full Stack Developer & Consultor ERP / IoT</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#395CAA',   /* Blasphemous Blue */
+              hover: '#2E4B8C',
+              light: '#D5DEEF'      /* Cold Shoulder */
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-[#F8FAFC] dark:bg-[#0A0E17] text-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-200 selection:bg-brand selection:text-white">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="sticky top-0 z-40 bg-white/90 dark:bg-[#0A0E17]/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+
+      <!-- Brand -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-brand flex items-center justify-center text-white font-mono font-bold text-sm">
+          MA
+        </div>
+        <div>
+          <span class="font-bold text-sm text-slate-900 dark:text-white tracking-tight block">Matias Acosta</span>
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-mono" data-i18n="nav_role">Full Stack &bull; Rosario, AR</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#proyectos" class="hover:text-brand dark:hover:text-brand transition-colors" data-i18n="nav_projects">Proyectos</a>
+        <a href="#experiencia" class="hover:text-brand dark:hover:text-brand transition-colors" data-i18n="nav_experience">Experiencia</a>
+        <a href="#docencia" class="hover:text-brand dark:hover:text-brand transition-colors" data-i18n="nav_teaching">Docencia</a>
+        <a href="#stack" class="hover:text-brand dark:hover:text-brand transition-colors" data-i18n="nav_stack">Stack</a>
+        <a href="#contacto" class="hover:text-brand dark:hover:text-brand transition-colors" data-i18n="nav_contact">Contacto</a>
+      </nav>
+
+      <!-- Actions: Lang & Theme Toggles -->
+      <div class="flex items-center gap-2.5">
+        <!-- Language Switcher -->
+        <button id="langToggle" class="px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-semibold text-slate-700 dark:text-slate-300 hover:border-brand transition-colors" aria-label="Cambiar Idioma">
+          <span id="langLabel">EN</span>
+        </button>
+
+        <!-- Theme Switcher -->
+        <button id="themeToggle" class="w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:border-brand transition-colors" aria-label="Cambiar Tema">
+          <i id="themeIcon" class="fa-solid fa-moon"></i>
+        </button>
+
+        <a href="#contacto" class="hidden sm:inline-flex px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand hover:bg-brand-hover text-white transition-colors" data-i18n="nav_cta">
+          Contactar
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-20">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="py-6 sm:py-10 border-b border-slate-200 dark:border-slate-800/80">
+      <div class="max-w-3xl space-y-6">
+
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-mono bg-slate-200/70 dark:bg-slate-800/70 text-slate-700 dark:text-slate-300 border border-slate-300/50 dark:border-slate-700">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span data-i18n="hero_badge">Socio en Cooperativa Tera &bull; Rosario, AR</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.2]" data-i18n="hero_title">
+          Desarrollo Full Stack, Ecosistemas ERP &amp; Telemetría IIoT.
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed" data-i18n="hero_desc">
+          Especialista en desarrollo e integración de sistemas. Implementación y customización de Odoo ERP 18/19 con localización fiscal AFIP/ARCA, plataformas de telemetría industrial en tiempo real y APIs multi-región.
+        </p>
+
+        <div class="pt-2 flex flex-wrap items-center gap-4 text-sm font-medium">
+          <a href="#proyectos" class="px-5 py-2.5 rounded-lg bg-brand hover:bg-brand-hover text-white transition-colors flex items-center gap-2">
+            <span data-i18n="hero_cta_projects">Ver Proyectos</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+
+          <div class="flex items-center gap-2">
+            <a href="https://github.com/acostamatt" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:border-brand text-xs font-mono flex items-center gap-1.5 transition-colors" title="GitHub Personal">
+              <i class="fa-brands fa-github text-sm"></i> acostamatt
+            </a>
+            <a href="https://www.linkedin.com/in/acostamati" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:border-brand text-xs font-mono flex items-center gap-1.5 transition-colors" title="LinkedIn">
+              <i class="fa-brands fa-linkedin text-sm"></i> acostamati
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== PROYECTOS ==================== -->
+    <section id="proyectos" class="space-y-6">
+
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
+        <div>
+          <span class="text-xs font-mono font-semibold uppercase text-brand tracking-wider" data-i18n="projects_tag">Portfolio Técnico</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1" data-i18n="projects_title">Proyectos &amp; Plataformas</h2>
+        </div>
+        <p class="text-sm text-slate-500 dark:text-slate-400 max-w-md" data-i18n="projects_subtitle">
+          Soluciones implementadas en producción, plataformas institucionales y demostraciones técnicas.
+        </p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="flex flex-wrap gap-2 text-xs font-mono" id="filtersContainer">
+        <button data-filter="all" class="filter-btn active px-3 py-1.5 rounded-md bg-brand text-white transition-colors" data-i18n="filter_all">Todos</button>
+        <button data-filter="iiot" class="filter-btn px-3 py-1.5 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" data-i18n="filter_iiot">IIoT &amp; Telemetría</button>
+        <button data-filter="erp" class="filter-btn px-3 py-1.5 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" data-i18n="filter_erp">ERP &amp; AFIP/ARCA</button>
+        <button data-filter="enterprise" class="filter-btn px-3 py-1.5 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" data-i18n="filter_enterprise">Enterprise &amp; APIs</button>
+        <button data-filter="web" class="filter-btn px-3 py-1.5 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" data-i18n="filter_web">Web Apps &amp; Gov</button>
+      </div>
+
+      <!-- Grilla de Proyectos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="projectsGrid">
+
+        <!-- TeraSync 4.0 -->
+        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="iiot">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-brand font-semibold">IIoT Platform</span>
+              <span class="text-emerald-600 dark:text-emerald-400" data-i18n="badge_prod">Producción</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">TeraSync 4.0</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_terasync_desc">
+              Telemetría industrial en tiempo real desde PLCs vía Adafruit IO y MQTT. Ingesta de datos con backend Laravel y frontend reactivo.
+            </p>
+            <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Laravel</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">React</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">MQTT</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <a href="https://terasync.tera.ar/" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline flex items-center gap-1">
+              <span data-i18n="link_live">Visitar Sitio</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Danone Europa -->
+        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="enterprise">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-brand font-semibold">Multi-Region API</span>
+              <span class="text-slate-500" data-i18n="badge_7countries">7 Países UE</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Danone Europa (Devecoop)</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_danone_desc">
+              APIs REST en Laravel y Docker para sincronización multi-país de usuarios, autenticación centralizada con Gigya y optimización SQL.
+            </p>
+            <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Laravel</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Docker</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Gigya</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <button onclick="openModal('danone')" class="text-brand hover:underline flex items-center gap-1">
+              <span data-i18n="btn_details">Detalles Técnicos</span>
+              <i class="fa-solid fa-circle-info text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Odoo 18/19 & AFIP/ARCA -->
+        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="erp">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-brand font-semibold">ERP Infrastructure</span>
+              <span class="text-emerald-600 dark:text-emerald-400">Docker</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Odoo 18/19 &amp; AFIP/ARCA</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_odoo_desc">
+              Despliegue containerizado con Docker Compose y PostgreSQL. Localización fiscal argentina y desarrollo de módulos a medida.
+            </p>
+            <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Python</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">PostgreSQL</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">AFIP/ARCA</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <button onclick="openModal('odoo')" class="text-brand hover:underline flex items-center gap-1">
+              <span data-i18n="btn_arch">Ver Arquitectura</span>
+              <i class="fa-solid fa-circle-info text-[10px]"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Estima (Privado) -->
+        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="enterprise">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-brand font-semibold">Presupuestación</span>
+              <span class="text-amber-600 dark:text-amber-400">NDA</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Estima</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_estima_desc">
+              Motor corporativo de cálculo presupuestario con reglas de negocio dinámicas y análisis de márgenes industriales.
+            </p>
+            <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">React</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Business Engine</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <button onclick="openModal('estima')" class="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 flex items-center gap-1">
+              <i class="fa-solid fa-lock text-[10px]"></i>
+              <span data-i18n="btn_private_summary">Resumen Confidencial</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Agrorecetas -->
+        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="web">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-brand font-semibold">AgroTech</span>
+              <span class="text-amber-600 dark:text-amber-400">Staging</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Agrorecetas</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_agro_desc">
+              Emisión y auditoría de recetas agronómicas digitales, lotes georreferenciados y trazabilidad fitosanitaria.
+            </p>
+            <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Laravel</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">GIS Maps</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <a href="https://agrorecetas.test.tera.ar" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline flex items-center gap-1">
+              <span data-i18n="link_demo">Visitar Demo</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Edducity -->
+        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="enterprise">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-brand font-semibold">Falabella</span>
+              <span class="text-emerald-600 dark:text-emerald-400" data-i18n="badge_prod">Producción</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Edducity</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_edducity_desc">
+              Refactorización backend y optimización de base de datos MySQL para plataforma educativa corporativa.
+            </p>
+            <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">PHP</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">MySQL Tuning</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <a href="https://www.edducity.com" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline flex items-center gap-1">
+              <span data-i18n="link_live">Visitar Sitio</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Trámite Digital -->
+        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="web">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-brand font-semibold">GovTech</span>
+              <span class="text-amber-600 dark:text-amber-400">Mercado Pago</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Trámite Digital &amp; Pagos</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_tramite_desc">
+              Autogestión ciudadana de trámites con pasarela de pagos integrada vía Mercado Pago y webhooks en tiempo real.
+            </p>
+            <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">MP API</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Laravel</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <a href="https://tramite.test.tera.ar/login" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline flex items-center gap-1">
+              <span data-i18n="link_demo">Visitar Demo</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Facturador AFIP -->
+        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="erp">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-brand font-semibold">Fiscal</span>
+              <span class="text-emerald-600 dark:text-emerald-400">AFIP WS</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Facturador Web</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_facturador_desc">
+              Emisión de comprobantes fiscales electrónicos mediante conexión directa con Web Services de AFIP / ARCA.
+            </p>
+            <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">AFIP WSFE</span>
+              <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">PHP</span>
+            </div>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <a href="https://facturador.test.tera.ar/" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline flex items-center gap-1">
+              <span data-i18n="link_demo">Visitar Demo</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Demos & Otras Implementaciones -->
+        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="web">
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <span class="text-brand font-semibold">Tera Ecosystem</span>
+              <span class="text-slate-500">+6 Apps</span>
+            </div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white" data-i18n="proj_other_title">Otras Demos &amp; Portales</h3>
+            <div class="grid grid-cols-2 gap-1.5 pt-1 text-xs">
+              <a href="https://apps.tera.coop.ar/" target="_blank" class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
+                <span>Apps Tera</span> <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-slate-400"></i>
+              </a>
+              <a href="https://aprepa.test.tera.ar" target="_blank" class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
+                <span>Aprepa</span> <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-slate-400"></i>
+              </a>
+              <a href="https://cotizador.test.tera.ar/" target="_blank" class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
+                <span>Cotizador</span> <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-slate-400"></i>
+              </a>
+              <a href="https://demo.concejoarmstrong.gob.ar/" target="_blank" class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
+                <span>Concejo</span> <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-slate-400"></i>
+              </a>
+              <a href="https://jymindustrias.test.tera.ar/" target="_blank" class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
+                <span>J&amp;M</span> <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-slate-400"></i>
+              </a>
+              <a href="https://tshirt.test.tera.ar/" target="_blank" class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
+                <span>T-Shirt</span> <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-slate-400"></i>
+              </a>
+            </div>
+          </div>
+          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-500">
+            <span data-i18n="text_live_demos">Demos Activas</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== EXPERIENCIA (RESUMIDA) ==================== -->
+    <section id="experiencia" class="space-y-6">
+
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-xs font-mono font-semibold uppercase text-brand tracking-wider" data-i18n="exp_tag">Trayectoria</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1" data-i18n="exp_title">Experiencia Profesional</h2>
+        </div>
+        <button onclick="window.print()" class="text-xs font-mono text-slate-500 hover:text-brand flex items-center gap-1.5">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span data-i18n="btn_cv_full">Ver CV Completo</span>
+        </button>
+      </div>
+
+      <div class="border-l-2 border-slate-200 dark:border-slate-800 pl-4 sm:pl-6 space-y-6">
+
+        <!-- Rol 1 -->
+        <div class="relative">
+          <span class="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3 h-3 rounded-full bg-brand"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-0.5">
+            <h3 class="text-sm font-bold text-slate-900 dark:text-white">Tech Lead Full Stack &amp; Consultor ERP / IoT</h3>
+            <span class="text-xs font-mono text-slate-500">Oct 2023 – Presente</span>
+          </div>
+          <div class="text-xs font-semibold text-brand mb-1.5">Cooperativa Tera</div>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="exp_tera">
+            Arquitectura de TeraSync 4.0 (telemetría IIoT sobre MQTT), despliegue de Odoo 18/19 en Docker con localización AFIP/ARCA y desarrollo de interfaces web en Next.js y Laravel.
+          </p>
+        </div>
+
+        <!-- Rol 2 -->
+        <div class="relative">
+          <span class="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-700"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-0.5">
+            <h3 class="text-sm font-bold text-slate-900 dark:text-white">Desarrollador Full Stack SSR / Senior (APIs Multi-Región)</h3>
+            <span class="text-xs font-mono text-slate-500">Abr 2023 – Feb 2025</span>
+          </div>
+          <div class="text-xs font-semibold text-brand mb-1.5">Danone Europa (vía Tera / Devecoop)</div>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="exp_danone">
+            APIs en Laravel y Docker para sincronización de datos en 7 países europeos, autenticación Gigya y optimización de consultas SQL de alto volumen.
+          </p>
+        </div>
+
+        <!-- Rol 3 -->
+        <div class="relative">
+          <span class="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-700"></span>
+          <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-0.5">
+            <h3 class="text-sm font-bold text-slate-900 dark:text-white">Desarrollador Full Stack (Backend &amp; Cloud)</h3>
+            <span class="text-xs font-mono text-slate-500">Abr 2021 – Presente</span>
+          </div>
+          <div class="text-xs font-semibold text-brand mb-1.5">Falabella Financiero / Estratégica / Molino Indelma</div>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="exp_falabella">
+            Refactorización de legacy para Falabella (Edducity), web scraping con Node.js/AWS Lambda para Estratégica y plataforma de gestión en Python/Django para Molino Indelma.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== DOCENCIA ==================== -->
+    <section id="docencia" class="space-y-4">
+      <div>
+        <span class="text-xs font-mono font-semibold uppercase text-brand tracking-wider" data-i18n="teach_tag">Actividad Académica</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1" data-i18n="teach_title">Docencia Terciaria</h2>
+      </div>
+
+      <div class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] space-y-3">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
+          <h3 class="text-sm font-bold text-slate-900 dark:text-white" data-i18n="teach_role">Profesor en Nivel Superior en Desarrollo de Software</h3>
+          <span class="text-xs font-mono text-slate-500">Mayo 2021 – Actualidad</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-semibold text-brand">Instituto Superior Particular N° 4038 "Juan Pablo II" (Roldán, Santa Fe)</span>
+          <a href="https://github.com/acosta4038" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-slate-500 hover:text-brand flex items-center gap-1">
+            <i class="fa-brands fa-github"></i> github.com/acosta4038
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 text-xs">
+          <div class="p-3 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <strong class="text-slate-900 dark:text-white block mb-0.5">Sistemas Operativos</strong>
+            <p class="text-slate-500 dark:text-slate-400 text-[11px]" data-i18n="so_desc">Procesos, memoria, POSIX, Linux Kernel y SysAdmin.</p>
+          </div>
+          <div class="p-3 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <strong class="text-slate-900 dark:text-white block mb-0.5">Ingeniería de Software I</strong>
+            <p class="text-slate-500 dark:text-slate-400 text-[11px]" data-i18n="is1_desc">Metodologías ágiles, análisis de requerimientos y patrones.</p>
+          </div>
+          <div class="p-3 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <strong class="text-slate-900 dark:text-white block mb-0.5">Ingeniería de Software II</strong>
+            <p class="text-slate-500 dark:text-slate-400 text-[11px]" data-i18n="is2_desc">Sistemas distribuidos, QA, CI/CD y arquitecturas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STACK ==================== -->
+    <section id="stack" class="space-y-4">
+      <div>
+        <span class="text-xs font-mono font-semibold uppercase text-brand tracking-wider" data-i18n="stack_tag">Capacidades</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1" data-i18n="stack_title">Stack Tecnológico</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726]">
+          <h3 class="text-xs font-bold text-slate-900 dark:text-white mb-2">Backend &amp; DB</h3>
+          <ul class="text-xs font-mono text-slate-600 dark:text-slate-400 space-y-1">
+            <li>• PHP / Laravel</li>
+            <li>• Python / Django</li>
+            <li>• PostgreSQL / MySQL</li>
+            <li>• Redis Streams</li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726]">
+          <h3 class="text-xs font-bold text-slate-900 dark:text-white mb-2">ERP &amp; Industrial IoT</h3>
+          <ul class="text-xs font-mono text-slate-600 dark:text-slate-400 space-y-1">
+            <li>• Odoo 18 / 19</li>
+            <li>• AFIP / ARCA (WSFE)</li>
+            <li>• MQTT / Adafruit IO</li>
+            <li>• Telemetría de PLCs</li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726]">
+          <h3 class="text-xs font-bold text-slate-900 dark:text-white mb-2">Cloud &amp; DevOps</h3>
+          <ul class="text-xs font-mono text-slate-600 dark:text-slate-400 space-y-1">
+            <li>• Docker &amp; Compose</li>
+            <li>• Linux (Debian/Ubuntu)</li>
+            <li>• AWS (Lambda, S3)</li>
+            <li>• NGINX / CI-CD</li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726]">
+          <h3 class="text-xs font-bold text-slate-900 dark:text-white mb-2">Frontend &amp; Integration</h3>
+          <ul class="text-xs font-mono text-slate-600 dark:text-slate-400 space-y-1">
+            <li>• Next.js / React</li>
+            <li>• TypeScript / Tailwind</li>
+            <li>• Mercado Pago API</li>
+            <li>• Gigya Identity SSO</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACTO & CUENTAS ==================== -->
+    <footer id="contacto" class="pt-6 border-t border-slate-200 dark:border-slate-800 space-y-6">
+
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h3 class="text-base font-bold text-slate-900 dark:text-white" data-i18n="contact_title">Contacto Directo</h3>
+          <p class="text-xs text-slate-500 dark:text-slate-400 font-mono">Rosario, Santa Fe &bull; Cooperativa Tera</p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- WhatsApp Directo -->
+          <a href="https://wa.me/5493415152771" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500 hover:text-white text-xs font-mono font-medium transition-colors flex items-center gap-1.5">
+            <i class="fa-brands fa-whatsapp text-sm"></i> +54 9 341 515-2771
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:macosta@tera.coop.ar" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-brand text-xs font-mono transition-colors flex items-center gap-1.5">
+            <i class="fa-regular fa-envelope"></i> macosta@tera.coop.ar
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/acostamati" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg border border-slate-300 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:border-brand hover:text-brand transition-colors" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Repositorios Asociados -->
+      <div class="p-3 rounded-lg bg-slate-100/60 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 text-xs flex flex-wrap items-center justify-between gap-2">
+        <span class="font-mono text-slate-500 dark:text-slate-400" data-i18n="text_repos">Repositorios &amp; Cuentas GitHub:</span>
+        <div class="flex items-center gap-3 font-mono text-[11px]">
+          <a href="https://github.com/acostamatt" target="_blank" class="hover:text-brand flex items-center gap-1">
+            <i class="fa-brands fa-github"></i> acostamatt (Personal)
+          </a>
+          <span class="text-slate-400">&bull;</span>
+          <a href="https://github.com/CoopTera/" target="_blank" class="hover:text-brand flex items-center gap-1">
+            <i class="fa-brands fa-github"></i> CoopTera (Cooperativa)
+          </a>
+          <span class="text-slate-400">&bull;</span>
+          <a href="https://github.com/acosta4038" target="_blank" class="hover:text-brand flex items-center gap-1">
+            <i class="fa-brands fa-github"></i> acosta4038 (Educativo)
+          </a>
+        </div>
+      </div>
+
+      <div class="text-center text-[11px] font-mono text-slate-400 dark:text-slate-500 pb-4">
+        &copy; 2026 Matias Acosta &bull; Cooperativa Tera &bull; Rosario, Santa Fe
+      </div>
+
+    </footer>
+
+  </main>
+
+  <!-- ==================== MODAL TÉCNICO ==================== -->
+  <div id="techModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="w-full max-w-lg rounded-xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 p-5 space-y-3 shadow-xl">
+      <div class="flex items-center justify-between">
+        <h4 id="modalTitle" class="font-bold text-slate-900 dark:text-white text-sm">Detalles</h4>
+        <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <p id="modalDesc" class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed"></p>
+      <div class="pt-2 flex justify-end">
+        <button onclick="closeModal()" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== JS: I18N, THEME & MODAL ==================== -->
+  <script>
+    // 1. DICCIONARIO I18N (ES / EN)
+    const translations = {
+      es: {
+        nav_role: "Full Stack • Rosario, AR",
+        nav_projects: "Proyectos",
+        nav_experience: "Experiencia",
+        nav_teaching: "Docencia",
+        nav_stack: "Stack",
+        nav_contact: "Contacto",
+        nav_cta: "Contactar",
+        hero_badge: "Socio en Cooperativa Tera • Rosario, AR",
+        hero_title: "Desarrollo Full Stack, Ecosistemas ERP & Telemetría IIoT.",
+        hero_desc: "Especialista en desarrollo e integración de sistemas. Implementación y customización de Odoo ERP 18/19 con localización fiscal AFIP/ARCA, plataformas de telemetría industrial en tiempo real y APIs multi-región.",
+        hero_cta_projects: "Ver Proyectos",
+        projects_tag: "Portfolio Técnico",
+        projects_title: "Proyectos & Plataformas",
+        projects_subtitle: "Soluciones implementadas en producción, plataformas institucionales y demostraciones técnicas.",
+        filter_all: "Todos",
+        filter_iiot: "IIoT & Telemetría",
+        filter_erp: "ERP & AFIP/ARCA",
+        filter_enterprise: "Enterprise & APIs",
+        filter_web: "Web Apps & Gov",
+        badge_prod: "Producción",
+        badge_7countries: "7 Países UE",
+        proj_terasync_desc: "Telemetría industrial en tiempo real desde PLCs vía Adafruit IO y MQTT. Ingesta de datos con backend Laravel y frontend reactivo.",
+        proj_danone_desc: "APIs REST en Laravel y Docker para sincronización multi-país de usuarios, autenticación centralizada con Gigya y optimización SQL.",
+        proj_odoo_desc: "Despliegue containerizado con Docker Compose y PostgreSQL. Localización fiscal argentina y desarrollo de módulos a medida.",
+        proj_estima_desc: "Motor corporativo de cálculo presupuestario con reglas de negocio dinámicas y análisis de márgenes industriales.",
+        proj_agro_desc: "Emisión y auditoría de recetas agronómicas digitales, lotes georreferenciados y trazabilidad fitosanitaria.",
+        proj_edducity_desc: "Refactorización backend y optimización de base de datos MySQL para plataforma educativa corporativa.",
+        proj_tramite_desc: "Autogestión ciudadana de trámites con pasarela de pagos integrada vía Mercado Pago y webhooks en tiempo real.",
+        proj_facturador_desc: "Emisión de comprobantes fiscales electrónicos mediante conexión directa con Web Services de AFIP / ARCA.",
+        proj_other_title: "Otras Demos & Portales",
+        link_live: "Visitar Sitio",
+        link_demo: "Visitar Demo",
+        btn_details: "Detalles Técnicos",
+        btn_arch: "Ver Arquitectura",
+        btn_private_summary: "Resumen Confidencial",
+        text_live_demos: "Demos Activas",
+        exp_tag: "Trayectoria",
+        exp_title: "Experiencia Profesional",
+        btn_cv_full: "Ver CV Completo",
+        exp_tera: "Arquitectura de TeraSync 4.0 (telemetría IIoT sobre MQTT), despliegue de Odoo 18/19 en Docker con localización AFIP/ARCA y desarrollo de interfaces web en Next.js y Laravel.",
+        exp_danone: "APIs en Laravel y Docker para sincronización de datos en 7 países europeos, autenticación Gigya y optimización de consultas SQL de alto volumen.",
+        exp_falabella: "Refactorización de legacy para Falabella (Edducity), web scraping con Node.js/AWS Lambda para Estratégica y plataforma de gestión en Python/Django para Molino Indelma.",
+        teach_tag: "Actividad Académica",
+        teach_title: "Docencia Terciaria",
+        teach_role: "Profesor en Nivel Superior en Desarrollo de Software",
+        so_desc: "Procesos, memoria, POSIX, Linux Kernel y SysAdmin.",
+        is1_desc: "Metodologías ágiles, análisis de requerimientos y patrones.",
+        is2_desc: "Sistemas distribuidos, QA, CI/CD y arquitecturas.",
+        stack_tag: "Capacidades",
+        stack_title: "Stack Tecnológico",
+        contact_title: "Contacto Directo",
+        text_repos: "Repositorios & Cuentas GitHub:"
+      },
+      en: {
+        nav_role: "Full Stack • Rosario, AR",
+        nav_projects: "Projects",
+        nav_experience: "Experience",
+        nav_teaching: "Teaching",
+        nav_stack: "Stack",
+        nav_contact: "Contact",
+        nav_cta: "Get in Touch",
+        hero_badge: "Partner at Cooperativa Tera • Rosario, AR",
+        hero_title: "Full Stack Engineering, ERP Ecosystems & IIoT Telemetry.",
+        hero_desc: "Specialized in software systems architecture and integration. Deployment and customization of Odoo ERP 18/19 with AFIP/ARCA fiscal localization, real-time industrial telemetry, and multi-region APIs.",
+        hero_cta_projects: "Explore Projects",
+        projects_tag: "Technical Portfolio",
+        projects_title: "Projects & Platforms",
+        projects_subtitle: "Production deployments, enterprise platforms, and interactive technical demos.",
+        filter_all: "All",
+        filter_iiot: "IIoT & Telemetry",
+        filter_erp: "ERP & AFIP/ARCA",
+        filter_enterprise: "Enterprise & APIs",
+        filter_web: "Web Apps & Gov",
+        badge_prod: "Production",
+        badge_7countries: "7 EU Countries",
+        proj_terasync_desc: "Real-time industrial telemetry from PLCs via Adafruit IO and MQTT. Data ingestion backend in Laravel with reactive UI.",
+        proj_danone_desc: "REST APIs in Laravel and Docker for multi-country user synchronization, Gigya identity auth, and SQL query tuning.",
+        proj_odoo_desc: "Containerized deployment with Docker Compose and PostgreSQL. Argentine fiscal localization and custom module development.",
+        proj_estima_desc: "Corporate estimation engine with dynamic business rules, multi-tier pricing, and industrial margin simulation.",
+        proj_agro_desc: "Agronomic digital prescription issuing and auditing platform with geolocation and phytosanitary traceability.",
+        proj_edducity_desc: "Backend refactoring and MySQL database performance optimization for corporate education platform.",
+        proj_tramite_desc: "Civic procedural platform with automated payment gateway integration via Mercado Pago and secure webhooks.",
+        proj_facturador_desc: "Direct electronic fiscal invoice issuing module consuming AFIP / ARCA Web Services.",
+        proj_other_title: "Additional Demos & Portals",
+        link_live: "Live Platform",
+        link_demo: "Explore Demo",
+        btn_details: "Technical Specs",
+        btn_arch: "Architecture",
+        btn_private_summary: "Confidential Overview",
+        text_live_demos: "Active Demos",
+        exp_tag: "Trajectory",
+        exp_title: "Professional Experience",
+        btn_cv_full: "Print / Save CV",
+        exp_tera: "Architecture of TeraSync 4.0 (MQTT IIoT), Odoo 18/19 Docker deployments with AFIP/ARCA localization, and modern Next.js/Laravel web apps.",
+        exp_danone: "Laravel and Docker APIs for data synchronization across 7 European countries, Gigya identity integration, and SQL performance tuning.",
+        exp_falabella: "Legacy refactoring for Falabella (Edducity), web scraping with Node.js/AWS Lambda for Estratégica, and Python/Django ERP for Molino Indelma.",
+        teach_tag: "Academic Activity",
+        teach_title: "Higher Education Lecturer",
+        teach_role: "Software Development Professor (Higher Technical Degree)",
+        so_desc: "Processes, virtual memory, POSIX, Linux Kernel, and SysAdmin.",
+        is1_desc: "Agile methodologies, requirements analysis, and design patterns.",
+        is2_desc: "Distributed systems, QA, CI/CD pipelines, and cloud architecture.",
+        stack_tag: "Core Capabilities",
+        stack_title: "Technical Stack",
+        contact_title: "Direct Contact",
+        text_repos: "GitHub Repositories & Accounts:"
+      }
+    };
+
+    let currentLang = localStorage.getItem('portfolio_lang') || 'es';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('portfolio_lang', lang);
+      document.getElementById('langLabel').innerText = lang === 'es' ? 'EN' : 'ES';
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerText = translations[lang][key];
+        }
+      });
+    }
+
+    document.getElementById('langToggle').addEventListener('click', () => {
+      setLanguage(currentLang === 'es' ? 'en' : 'es');
+    });
+
+    // 2. THEME TOGGLE (Dark / Light)
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const html = document.documentElement;
+
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        html.classList.add('dark');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        html.classList.remove('dark');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+
+    themeToggleBtn.addEventListener('click', () => {
+      setTheme(html.classList.contains('dark') ? 'light' : 'dark');
+    });
+
+    // 3. FILTRADO REACTIVO
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        filterButtons.forEach(b => {
+          b.classList.remove('active', 'bg-brand', 'text-white');
+          b.classList.add('bg-slate-200/80', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+        });
+
+        btn.classList.add('active', 'bg-brand', 'text-white');
+        btn.classList.remove('bg-slate-200/80', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+
+        projectCards.forEach(card => {
+          const cat = card.getAttribute('data-category');
+          card.style.display = (filter === 'all' || cat === filter) ? 'flex' : 'none';
+        });
+      });
+    });
+
+    // 4. MODAL TÉCNICO
+    const modalData = {
+      danone: {
+        title: 'Danone Europa — APIs Multi-Región',
+        desc: 'Sistemas backend en Laravel y Docker para la sincronización de datos de consumidores y campañas entre 7 países europeos. Integración con Gigya Customer Identity y optimización de consultas SQL complejas sobre grandes volúmenes.'
+      },
+      odoo: {
+        title: 'Odoo 18/19 & AFIP/ARCA',
+        desc: 'Arquitectura containerizada con Docker Compose para Odoo Community y Enterprise. Localización fiscal argentina con facturación electrónica y desarrollo de módulos a medida para gestión técnica y pesaje.'
+      },
+      estima: {
+        title: 'Estima — Motor Presupuestario (Confidencial)',
+        desc: 'Plataforma empresarial de cálculo algorítmico y presupuestación con matrices de costos dinámicas y exportación directa a sistemas contables y ERPs.'
+      }
+    };
+
+    function openModal(id) {
+      const data = modalData[id];
+      if (!data) return;
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalDesc').innerText = data.desc;
+      const modal = document.getElementById('techModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('techModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Inicializar idioma al cargar
+    setLanguage(currentLang);
+  </script>
+</body>
+</html>
