@@ -40,6 +40,7 @@ export interface Project {
   satellitesFooterKey?: "text_live_demos";
   image?: string;
   logo?: string;
+  logos?: string[];
   company?: string;
 }
 

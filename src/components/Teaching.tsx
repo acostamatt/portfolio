@@ -17,25 +17,39 @@ export default function Teaching() {
       </div>
 
       <div className="space-y-3 rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-[#111726]">
-        <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
-          <h3 className="text-sm font-bold text-slate-900 dark:text-white">
-            {t("teaching", "role")}
-          </h3>
-          <span className="font-mono text-xs text-slate-500 dark:text-slate-400">Mayo 2021 – Actualidad</span>
-        </div>
+        <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
+          <div className="flex items-center gap-3">
+            <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-slate-200 bg-white shadow-sm dark:border-slate-700">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logos/ispi4038.jpeg"
+                alt="Logo Instituto N° 4038 Juan Pablo II"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white">
+                {t("teaching", "role")}
+              </h3>
+              <span className="block text-xs font-semibold text-brand dark:text-[#7ba1ee]">
+                Instituto Superior Particular N° 4038 «Juan Pablo II» (Roldán, Santa Fe)
+              </span>
+            </div>
+          </div>
 
-        <div className="flex flex-wrap items-center justify-between gap-2">
-          <span className="text-xs font-semibold text-brand dark:text-[#7ba1ee]">
-            Instituto Superior Particular N° 4038 «Juan Pablo II» (Roldán, Santa Fe)
-          </span>
-          <a
-            href="https://github.com/acosta4038"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 font-mono text-xs text-slate-600 transition-colors hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-400 dark:hover:text-[#7ba1ee]"
-          >
-            <GithubIcon className="h-3.5 w-3.5" /> github.com/acosta4038
-          </a>
+          <div className="flex flex-col items-start gap-1 sm:items-end">
+            <span className="font-mono text-xs text-slate-500 dark:text-slate-400">
+              Mayo 2021 – Actualidad
+            </span>
+            <a
+              href="https://github.com/acosta4038"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 font-mono text-xs text-slate-600 transition-colors hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-400 dark:hover:text-[#7ba1ee]"
+            >
+              <GithubIcon className="h-3.5 w-3.5" /> github.com/acosta4038
+            </a>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 gap-3 pt-1 text-xs sm:grid-cols-3">

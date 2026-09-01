@@ -11,14 +11,14 @@ export const experience: ExperienceItem[] = [
   {
     role: "Desarrollador Full Stack SSR / Senior (APIs Multi-Región)",
     period: "Abr 2023 – Feb 2025",
-    company: "Danone Europa (vía Tera / Devecoop)",
+    company: "Danone & Disney Europa (vía Tera / Devecoop)",
     descKey: "danone",
     accent: "muted",
   },
   {
     role: "Desarrollador Full Stack (Backend & Cloud)",
     period: "Abr 2021 – Presente",
-    company: "Falabella Financiero / Estratégica / Molino Indelma",
+    company: "Grupo Falabella (Edducity, Banco, CMR) / Estratégica / Indelma",
     descKey: "falabella",
     accent: "muted",
   },
