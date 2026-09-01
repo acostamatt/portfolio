@@ -27,7 +27,7 @@ export default function Experience() {
         <button
           type="button"
           onClick={() => window.print()}
-          className="flex items-center gap-1.5 font-mono text-xs text-slate-600 transition-colors hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-400 dark:hover:text-[#7ba1ee]"
+          className="no-print flex items-center gap-1.5 font-mono text-xs text-slate-600 transition-colors hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-400 dark:hover:text-[#7ba1ee]"
         >
           <FileDown size={14} />
           <span>{t("experience", "btn_cv_full")}</span>

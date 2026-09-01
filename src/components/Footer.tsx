@@ -63,7 +63,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             title="LinkedIn"
-            className="flex h-8 w-8 items-center justify-center rounded-lg border border-slate-300 text-slate-600 transition-colors hover:border-brand hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:border-slate-700 dark:text-slate-300 dark:hover:text-[#7ba1ee]"
+            className="no-print flex h-8 w-8 items-center justify-center rounded-lg border border-slate-300 text-slate-600 transition-colors hover:border-brand hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:border-slate-700 dark:text-slate-300 dark:hover:text-[#7ba1ee]"
           >
             <LinkedinIcon className="h-3.5 w-3.5" />
           </a>

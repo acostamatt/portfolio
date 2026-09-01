@@ -32,3 +32,168 @@ body {
   background-color: #395caa;
   color: #ffffff;
 }
+
+/* ==========================================================================
+   PRINT / CV EXPORT  —  triggered by the "Ver CV Completo" button (window.print)
+   Goal: a clean, single-column A4 document. No dark surfaces, no chrome,
+   no interactive affordances, no horizontal overflow.
+   ========================================================================== */
+
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm 14mm;
+  }
+
+  /* --- 1. Force the light, ink-on-paper palette -------------------------- */
+  :root,
+  .dark {
+    --background: #ffffff;
+    --foreground: #000000;
+  }
+
+  html,
+  body {
+    height: auto !important;
+    background: #ffffff !important;
+    color: #1e293b !important;
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  /* Flatten every decorative surface: dark cards, gradients, blurs, shadows.
+     Text collapses to ink; accents are restored selectively below. */
+  *,
+  *::before,
+  *::after {
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+    color: #1e293b !important;
+    border-color: #cbd5e1 !important;
+    transition: none !important;
+    animation: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  strong,
+  th {
+    color: #000000 !important;
+  }
+
+  /* Brand accent survives as the only colour, for section tags and company lines. */
+  .text-brand {
+    color: #395caa !important;
+  }
+
+  /* --- 2. Strip interactive chrome --------------------------------------- */
+  header, /* Navbar: nav links, LangToggle, ThemeToggle, mobile trigger */
+  [role="dialog"], /* TechModal */
+  [role="tablist"], /* Projects category filters */
+  [aria-modal="true"],
+  .no-print {
+    display: none !important;
+  }
+
+  /* Links print as plain text — no underlines, no href expansion noise. */
+  a {
+    text-decoration: none !important;
+  }
+
+  /* --- 3. A4 flow: kill viewport-driven layout --------------------------- */
+  * {
+    position: static !important;
+    overflow: visible !important;
+    max-height: none !important;
+  }
+
+  main {
+    display: block !important;
+    max-width: none !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* `space-y-20` between sections is ~80px — far too much on paper. */
+  main > * + * {
+    margin-top: 7mm !important;
+  }
+
+  section,
+  footer {
+    padding: 0 !important;
+  }
+
+  /* --- 4. Typographic scale for paper ----------------------------------- */
+  h1 {
+    font-size: 20pt !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: 14pt !important;
+    line-height: 1.25 !important;
+    margin-bottom: 2mm !important;
+  }
+
+  h3 {
+    font-size: 11pt !important;
+  }
+
+  p,
+  li,
+  span {
+    font-size: 9.5pt !important;
+  }
+
+  /* --- 5. Page-break hygiene -------------------------------------------- */
+  /* Keep individual cards intact. Never `break-inside: avoid` a whole section:
+     Projects/Stack are taller than a page, and an unsatisfiable constraint makes
+     Chrome eject the section to the next page, leaving a large blank gap. */
+  article,
+  li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  p,
+  li {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* --- 6. Grids and media ----------------------------------------------- */
+  /* Stack the 3-up Stack / Teaching / Projects grids into 2 readable columns. */
+  .grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 4mm !important;
+  }
+
+  img,
+  svg {
+    max-width: 100% !important;
+    height: auto !important;
+    break-inside: avoid;
+  }
+
+  /* Bordered cards keep a hairline so groupings stay legible. */
+  [class*="rounded-xl"],
+  [class*="rounded-lg"] {
+    border-radius: 0 !important;
+  }
+}

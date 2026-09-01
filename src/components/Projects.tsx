@@ -125,7 +125,8 @@ function ProjectCard({ project, isPriority, onOpenModal }: ProjectCardProps) {
   return (
     <article className="group flex flex-col justify-between overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xs transition-all duration-300 hover:border-brand/50 hover:shadow-lg dark:border-slate-800 dark:bg-[#111726] dark:hover:border-slate-700">
       {/* Visual Asset Banner (Preview / High-Contrast Logo Showcase / Visual Fallback) */}
-      <div className="relative h-48 w-full overflow-hidden border-b border-slate-200 bg-[#0A0E17] dark:border-slate-800/80">
+      {/* `no-print`: dark-surface banner carries no value on a printed CV. */}
+      <div className="no-print relative h-48 w-full overflow-hidden border-b border-slate-200 bg-[#0A0E17] dark:border-slate-800/80">
         <ProjectBannerVisual project={project} isPriority={isPriority} title={title} />
 
         {/* Top Floating Badges (Tag & Status) */}
@@ -169,7 +170,9 @@ function ProjectCard({ project, isPriority, onOpenModal }: ProjectCardProps) {
 
           {/* Corporate Entity / Client Logos Pill Bar */}
           {project.logos && project.logos.length > 1 && (
-            <div className="flex flex-wrap items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-2.5 dark:border-slate-800 dark:bg-slate-900/60">
+            /* `no-print`: these logos are light-on-dark and vanish once print
+               flattens backgrounds; the client name is already in the copy. */
+            <div className="no-print flex flex-wrap items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-2.5 dark:border-slate-800 dark:bg-slate-900/60">
               <span className="font-mono text-[10px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
                 Marcas / Clientes:
               </span>

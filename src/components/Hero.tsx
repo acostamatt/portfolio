@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="flex flex-wrap items-center gap-4 pt-2 text-sm font-medium">
           <a
             href="#proyectos"
-            className="flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-white transition-colors hover:bg-brand-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
+            className="no-print flex items-center gap-2 rounded-lg bg-brand px-5 py-2.5 text-white transition-colors hover:bg-brand-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand"
           >
             <span>{t("hero", "cta_projects")}</span>
             <ArrowRight size={14} />
