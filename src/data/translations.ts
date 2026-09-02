@@ -163,7 +163,7 @@ export const translations = {
     experience: {
       tag: "Trajectory",
       title: "Professional Experience",
-      btn_cv_full: "Print / Save CV",
+      btn_cv_full: "Download Full CV",
       tera: "Architecture of TeraSync 4.0 (MQTT IIoT), Odoo 18/19 Docker deployments with AFIP/ARCA localization, and modern Next.js/Laravel web apps.",
       danone: "Laravel and Docker APIs for multi-country user and campaign synchronization (Danone & Disney) across 7 European countries, Gigya identity integration, and SQL performance tuning.",
       falabella: "Legacy refactoring of Edducity corporate platform for Grupo Falabella (Banco, CMR, Seguros), web scraping with Node.js/AWS Lambda for Estratégica, and Python/Django ERP for Molino Indelma.",
