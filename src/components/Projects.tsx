@@ -32,11 +32,11 @@ const FILTERS: {
 
 const BADGE_TONES: Record<Project["badgeTone"], string> = {
   success:
-    "border-emerald-500/20 bg-emerald-50 text-emerald-700 dark:border-emerald-500/30 dark:bg-emerald-950/40 dark:text-emerald-300",
+    "border-emerald-500/40 bg-emerald-950/80 text-emerald-300 shadow-xs",
   warning:
-    "border-amber-500/20 bg-amber-50 text-amber-700 dark:border-amber-500/30 dark:bg-amber-950/40 dark:text-amber-300",
+    "border-amber-500/40 bg-amber-950/80 text-amber-300 shadow-xs",
   neutral:
-    "border-slate-300/40 bg-slate-100 text-slate-700 dark:border-slate-700/60 dark:bg-slate-800/80 dark:text-slate-300",
+    "border-slate-600/70 bg-slate-800/90 text-slate-200 shadow-xs",
 };
 
 export default function Projects({ onOpenModal }: ProjectsProps) {
@@ -131,12 +131,12 @@ function ProjectCard({ project, isPriority, onOpenModal }: ProjectCardProps) {
 
         {/* Top Floating Badges (Tag & Status) */}
         <div className="pointer-events-none absolute inset-x-0 top-0 z-20 flex items-center justify-between p-3">
-          <span className="rounded-md border border-slate-700/80 bg-[#0A0E17]/90 px-2.5 py-1 font-mono text-[11px] font-semibold text-brand backdrop-blur dark:text-[#7ba1ee]">
+          <span className="rounded-md border border-slate-700/80 bg-slate-900/90 px-2.5 py-1 font-mono text-[11px] font-semibold text-sky-400 backdrop-blur shadow-xs dark:text-sky-300">
             {project.tag}
           </span>
 
           <span
-            className={`rounded-md border px-2.5 py-1 font-mono text-[10px] font-medium backdrop-blur ${BADGE_TONES[project.badgeTone]}`}
+            className={`rounded-md border px-2.5 py-1 font-mono text-[10px] font-semibold backdrop-blur ${BADGE_TONES[project.badgeTone]}`}
           >
             {badgeLabel}
           </span>
@@ -160,7 +160,7 @@ function ProjectCard({ project, isPriority, onOpenModal }: ProjectCardProps) {
               {project.tech.map((techItem) => (
                 <span
                   key={techItem}
-                  className="rounded bg-slate-100 px-2 py-0.5 text-slate-700 dark:bg-slate-800 dark:text-slate-300"
+                  className="rounded border border-slate-200 bg-slate-100 px-2 py-0.5 font-medium text-slate-700 dark:border-slate-700/60 dark:bg-slate-800/80 dark:text-slate-200"
                 >
                   {techItem}
                 </span>
@@ -177,10 +177,10 @@ function ProjectCard({ project, isPriority, onOpenModal }: ProjectCardProps) {
                   href={satellite.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-between rounded border border-slate-200 bg-slate-50 p-1.5 text-slate-700 transition-colors hover:border-brand hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-blue-400 dark:hover:text-blue-300"
+                  className="flex items-center justify-between rounded border border-slate-200 bg-slate-50 p-1.5 font-medium text-slate-700 transition-colors hover:border-brand hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:border-slate-700/80 dark:bg-slate-800/80 dark:text-slate-200 dark:hover:border-brand dark:hover:text-[#7ba1ee]"
                 >
                   <span className="truncate">{satellite.name}</span>
-                  <ArrowUpRight size={10} className="shrink-0 text-slate-400" />
+                  <ArrowUpRight size={11} className="shrink-0 text-slate-400 dark:text-slate-400" />
                 </a>
               ))}
             </div>

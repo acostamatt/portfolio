@@ -111,7 +111,7 @@ export const projects: Project[] = [
     titleKey: "other_title",
     descKey: "proj_other",
     tech: [],
-    image: "/projects/tera-hub.png",
+    image: "/projects/itera_logo.png",
     satellites: [
       { name: "Apps Tera", href: "https://apps.tera.coop.ar/" },
       { name: "Aprepa", href: "https://aprepa.test.tera.ar" },
