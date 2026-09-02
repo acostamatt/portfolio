@@ -11,7 +11,7 @@ const DOT_CLASSES: Record<ExperienceItem["accent"], string> = {
 };
 
 export default function Experience() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <section id="experiencia" className="space-y-6 scroll-mt-20">
@@ -24,14 +24,29 @@ export default function Experience() {
             {t("experience", "title")}
           </h2>
         </div>
-        <button
-          type="button"
-          onClick={() => window.print()}
-          className="no-print flex items-center gap-1.5 font-mono text-xs text-slate-600 transition-colors hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-400 dark:hover:text-[#7ba1ee]"
-        >
-          <FileDown size={14} />
-          <span>{t("experience", "btn_cv_full")}</span>
-        </button>
+        {lang === "es" ? (
+          <a
+            href="/cvs/CV_Es_Acosta_Matias.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            download="CV_Es_Acosta_Matias.pdf"
+            className="no-print flex items-center gap-1.5 font-mono text-xs text-slate-600 transition-colors hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-400 dark:hover:text-[#7ba1ee]"
+            title="Descargar CV en PDF"
+          >
+            <FileDown size={14} />
+            <span>{t("experience", "btn_cv_full")}</span>
+          </a>
+        ) : (
+          <button
+            type="button"
+            onClick={() => window.print()}
+            className="no-print flex items-center gap-1.5 font-mono text-xs text-slate-600 transition-colors hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-400 dark:hover:text-[#7ba1ee]"
+            title="Print / Save CV"
+          >
+            <FileDown size={14} />
+            <span>{t("experience", "btn_cv_full")}</span>
+          </button>
+        )}
       </div>
 
       <div className="space-y-6 border-l-2 border-slate-200 pl-4 sm:pl-6 dark:border-slate-800">
