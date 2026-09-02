@@ -39,9 +39,15 @@ export interface Project {
   satellites?: SatelliteLink[];
   satellitesFooterKey?: "text_live_demos";
   image?: string;
-  logo?: string;
-  logos?: string[];
-  company?: string;
+}
+
+export interface ClientBrand {
+  name: string;
+  logo: string;
+  darkLogo?: string;
+  width?: number;
+  height?: number;
+  invertInLight?: boolean;
 }
 
 export type ExperienceItemDescKey = "tera" | "danone" | "falabella";

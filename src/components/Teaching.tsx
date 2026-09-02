@@ -19,12 +19,12 @@ export default function Teaching() {
       <div className="space-y-3 rounded-xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-[#111726]">
         <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
           <div className="flex items-center gap-3">
-            <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full border border-slate-200 bg-white shadow-sm dark:border-slate-700">
+            <div className="relative h-16 w-16 sm:h-20 sm:w-20 shrink-0 overflow-hidden rounded-2xl border border-slate-200 bg-white p-1.5 shadow-sm dark:border-slate-700 dark:bg-slate-900">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/logos/ispi4038.jpeg"
+                src="/logos/ispi4038.png"
                 alt="Logo Instituto N° 4038 Juan Pablo II"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-contain"
               />
             </div>
             <div>

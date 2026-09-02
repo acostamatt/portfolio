@@ -124,7 +124,7 @@ function ProjectCard({ project, isPriority, onOpenModal }: ProjectCardProps) {
 
   return (
     <article className="group flex flex-col justify-between overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xs transition-all duration-300 hover:border-brand/50 hover:shadow-lg dark:border-slate-800 dark:bg-[#111726] dark:hover:border-slate-700">
-      {/* Visual Asset Banner (Preview / High-Contrast Logo Showcase / Visual Fallback) */}
+      {/* Visual Asset Banner (Preview or High-Tech Fallback) */}
       {/* `no-print`: dark-surface banner carries no value on a printed CV. */}
       <div className="no-print relative h-48 w-full overflow-hidden border-b border-slate-200 bg-[#0A0E17] dark:border-slate-800/80">
         <ProjectBannerVisual project={project} isPriority={isPriority} title={title} />
@@ -165,34 +165,6 @@ function ProjectCard({ project, isPriority, onOpenModal }: ProjectCardProps) {
                   {techItem}
                 </span>
               ))}
-            </div>
-          )}
-
-          {/* Corporate Entity / Client Logos Pill Bar */}
-          {project.logos && project.logos.length > 1 && (
-            /* `no-print`: these logos are light-on-dark and vanish once print
-               flattens backgrounds; the client name is already in the copy. */
-            <div className="no-print flex flex-wrap items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 p-2.5 dark:border-slate-800 dark:bg-slate-900/60">
-              <span className="font-mono text-[10px] font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                Marcas / Clientes:
-              </span>
-              <div className="flex flex-wrap items-center gap-1.5">
-                {project.logos.map((logoPath) => (
-                  <div
-                    key={logoPath}
-                    className="relative flex h-6 items-center justify-center rounded border border-slate-700 bg-slate-900 px-2 py-0.5 shadow-xs"
-                    title={project.company ?? title}
-                  >
-                    <Image
-                      src={logoPath}
-                      alt="Logo marca"
-                      width={60}
-                      height={18}
-                      className="h-3.5 w-auto max-w-[70px] object-contain"
-                    />
-                  </div>
-                ))}
-              </div>
             </div>
           )}
 
@@ -286,12 +258,11 @@ function ProjectBannerVisual({
 }) {
   const [imageError, setImageError] = useState(false);
 
-  // 1. Projects with custom preview graphic (terasync, estima, tramite-digital, facturador, other-demos)
   if (project.image && !imageError) {
     return (
       <div className="relative flex h-full w-full items-center justify-center bg-gradient-to-br from-[#0A0E17] via-[#111726] to-[#17223b] p-6 pt-9">
         <BannerGridPattern id={`grid-${project.id}`} />
-        <div className="relative h-28 w-full max-w-[220px] transition-transform duration-300 group-hover:scale-105">
+        <div className="relative z-10 flex h-28 w-full max-w-[220px] items-center justify-center transition-transform duration-300 group-hover:scale-105">
           <Image
             src={project.image}
             alt={`Previsualización de ${title}`}
@@ -307,58 +278,7 @@ function ProjectBannerVisual({
     );
   }
 
-  // 2. Multi-brand Corporate Ecosystems (Danone & Disney, Falabella Group & Edducity)
-  if (project.logos && project.logos.length > 0) {
-    return (
-      <div className="relative flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-[#0A0E17] via-[#111726] to-[#17223b] p-4 pt-8">
-        <BannerGridPattern id={`grid-${project.id}`} />
-        <div className="relative z-10 flex flex-wrap items-center justify-center gap-2.5">
-          {project.logos.map((logoPath) => (
-            <div
-              key={logoPath}
-              className="relative flex h-10 items-center justify-center rounded-lg border border-slate-700/80 bg-slate-900/95 px-3 py-1.5 shadow-md backdrop-blur transition-transform duration-300 group-hover:scale-105"
-            >
-              <Image
-                src={logoPath}
-                alt={project.company ?? title}
-                width={80}
-                height={26}
-                className="h-6 w-auto max-w-[85px] object-contain"
-              />
-            </div>
-          ))}
-        </div>
-        <div className="relative z-10 mt-2.5 flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-slate-400">
-          <Boxes className="h-3 w-3 text-brand dark:text-[#7ba1ee]" />
-          <span>Ecosistema Corporativo</span>
-        </div>
-      </div>
-    );
-  }
-
-  // 3. Single Logo Projects (Odoo ERP, Sintra Agrorecetas)
-  if (project.logo) {
-    return (
-      <div className="relative flex h-full w-full flex-col items-center justify-center bg-gradient-to-br from-[#0A0E17] via-[#111726] to-[#17223b] p-4 pt-8">
-        <BannerGridPattern id={`grid-${project.id}`} />
-        <div className="relative z-10 flex h-16 w-36 items-center justify-center rounded-xl border border-slate-700/80 bg-slate-900/95 p-2.5 shadow-md backdrop-blur transition-transform duration-300 group-hover:scale-105">
-          <Image
-            src={project.logo}
-            alt={project.company ?? title}
-            width={120}
-            height={40}
-            className="h-9 w-auto object-contain"
-          />
-        </div>
-        <div className="relative z-10 mt-2 flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider text-slate-400">
-          <Boxes className="h-3 w-3 text-brand dark:text-[#7ba1ee]" />
-          <span>{project.tag}</span>
-        </div>
-      </div>
-    );
-  }
-
-  // 4. Default High-Tech Category Fallback
+  // 2. High-Tech Category Fallback
   return <ProjectVisualFallback project={project} />;
 }
 

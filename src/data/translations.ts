@@ -19,6 +19,10 @@ export const translations = {
       desc: "Especialista en desarrollo e integración de sistemas. Implementación y customización de Odoo ERP 18/19 con localización fiscal AFIP/ARCA, plataformas de telemetría industrial en tiempo real y APIs multi-región.",
       cta_projects: "Ver Proyectos",
     },
+    clients: {
+      tag: "# TRAYECTORIA & CLIENTES",
+      title: "Ecosistemas y Marcas con las que trabajé",
+    },
     projects: {
       tag: "Portfolio Técnico",
       title: "Proyectos & Plataformas",
@@ -114,6 +118,10 @@ export const translations = {
       title: "Full Stack Engineering, ERP Ecosystems & IIoT Telemetry.",
       desc: "Specialized in software systems architecture and integration. Deployment and customization of Odoo ERP 18/19 with AFIP/ARCA fiscal localization, real-time industrial telemetry, and multi-region APIs.",
       cta_projects: "Explore Projects",
+    },
+    clients: {
+      tag: "# TRACK RECORD & CLIENTS",
+      title: "Ecosystems & Brands I've Worked With",
     },
     projects: {
       tag: "Technical Portfolio",

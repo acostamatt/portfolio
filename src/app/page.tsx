@@ -3,6 +3,7 @@
 import { useCallback, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ClientsMarquee from "@/components/ClientsMarquee";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Teaching from "@/components/Teaching";
@@ -25,6 +26,7 @@ export default function Home() {
       <Navbar />
       <main className="mx-auto w-full max-w-6xl space-y-20 px-4 py-10 sm:px-6">
         <Hero />
+        <ClientsMarquee />
         <Projects onOpenModal={openModal} />
         <Experience />
         <Teaching />
