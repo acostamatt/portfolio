@@ -30,21 +30,27 @@ export default function Experience() {
             target="_blank"
             rel="noopener noreferrer"
             download="CV_Es_Acosta_Matias.pdf"
-            className="no-print flex items-center gap-1.5 font-mono text-xs text-slate-600 transition-colors hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-400 dark:hover:text-[#7ba1ee]"
-            title="Descargar CV en PDF"
+            className="group no-print inline-flex items-center gap-2 rounded-xl border border-brand/40 bg-brand/10 px-3.5 py-2 font-mono text-xs font-semibold text-brand shadow-xs backdrop-blur-xs transition-all duration-200 hover:border-brand hover:bg-brand hover:text-white hover:shadow-md active:scale-95 dark:border-[#7ba1ee]/40 dark:bg-[#7ba1ee]/10 dark:text-[#7ba1ee] dark:hover:border-transparent dark:hover:bg-[#395CAA] dark:hover:text-white"
+            title="Descargar CV completo en PDF"
           >
-            <FileDown size={14} />
+            <FileDown className="h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5" />
             <span>{t("experience", "btn_cv_full")}</span>
+            <span className="rounded bg-brand/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand group-hover:bg-white/20 group-hover:text-white dark:bg-[#7ba1ee]/20 dark:text-[#7ba1ee]">
+              PDF
+            </span>
           </a>
         ) : (
           <button
             type="button"
             onClick={() => window.print()}
-            className="no-print flex items-center gap-1.5 font-mono text-xs text-slate-600 transition-colors hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-slate-400 dark:hover:text-[#7ba1ee]"
+            className="group no-print inline-flex items-center gap-2 rounded-xl border border-brand/40 bg-brand/10 px-3.5 py-2 font-mono text-xs font-semibold text-brand shadow-xs backdrop-blur-xs transition-all duration-200 hover:border-brand hover:bg-brand hover:text-white hover:shadow-md active:scale-95 dark:border-[#7ba1ee]/40 dark:bg-[#7ba1ee]/10 dark:text-[#7ba1ee] dark:hover:border-transparent dark:hover:bg-[#395CAA] dark:hover:text-white"
             title="Print / Save CV"
           >
-            <FileDown size={14} />
+            <FileDown className="h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5" />
             <span>{t("experience", "btn_cv_full")}</span>
+            <span className="rounded bg-brand/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-brand group-hover:bg-white/20 group-hover:text-white dark:bg-[#7ba1ee]/20 dark:text-[#7ba1ee]">
+              A4
+            </span>
           </button>
         )}
       </div>
