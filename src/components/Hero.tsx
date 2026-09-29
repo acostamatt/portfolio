@@ -8,8 +8,7 @@ export default function Hero() {
   return (
     <section className="border-b border-slate-200 py-6 sm:py-10 dark:border-slate-800/80">
       <div className="max-w-3xl space-y-6">
-        <div className="inline-flex items-center gap-2 rounded-md border border-slate-300/50 bg-slate-200/70 px-3 py-1 font-mono text-xs text-slate-700 dark:border-slate-700 dark:bg-slate-800/70 dark:text-slate-300">
-          <span className="h-2 w-2 rounded-full bg-emerald-500" />
+        <div className="inline-flex items-center rounded-md border border-slate-300/50 bg-slate-200/70 px-3 py-1 font-mono text-xs text-slate-700 dark:border-slate-700 dark:bg-slate-800/70 dark:text-slate-300">
           <span>{t("hero", "badge")}</span>
         </div>
 

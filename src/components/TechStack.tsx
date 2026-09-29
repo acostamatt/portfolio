@@ -5,27 +5,35 @@ interface StackLayer {
   items: string[];
 }
 
-const LAYERS: StackLayer[] = [
-  {
-    layerKey: "layer_backend",
-    items: ["PHP / Laravel", "Python / Django", "PostgreSQL / MySQL", "Redis Streams"],
-  },
-  {
-    layerKey: "layer_erp",
-    items: ["Odoo 18 / 19", "AFIP / ARCA (WSFE)", "MQTT / Adafruit IO", "Telemetría de PLCs"],
-  },
-  {
-    layerKey: "layer_cloud",
-    items: ["Docker & Compose", "Linux (Debian/Ubuntu)", "AWS (Lambda, S3)", "NGINX / CI-CD"],
-  },
-  {
-    layerKey: "layer_frontend",
-    items: ["Next.js / React", "TypeScript / Tailwind", "Mercado Pago API", "Gigya Identity SSO"],
-  },
-];
-
 export default function TechStack() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const isEn = lang === "en";
+
+  const layers: StackLayer[] = [
+    {
+      layerKey: "layer_backend",
+      items: ["PHP / Laravel", "Python / Django", "PostgreSQL / MySQL", "Redis Streams"],
+    },
+    {
+      layerKey: "layer_erp",
+      items: [
+        "Odoo 18 / 19",
+        "AFIP / ARCA (WSFE)",
+        isEn
+          ? "Node-RED (Connection Interface / Middleware)"
+          : "Node-RED (Interfaz de Conexión / Middleware)",
+        isEn ? "PLC Telemetry / MQTT" : "Telemetría de PLCs / MQTT",
+      ],
+    },
+    {
+      layerKey: "layer_cloud",
+      items: ["Docker & Compose", "Linux (Debian/Ubuntu)", "AWS (Lambda, S3)", "NGINX / CI-CD"],
+    },
+    {
+      layerKey: "layer_frontend",
+      items: ["Next.js / React", "TypeScript / Tailwind", "Mercado Pago API", "Gigya Identity SSO"],
+    },
+  ];
 
   return (
     <section id="stack" className="space-y-4 scroll-mt-20">
@@ -39,7 +47,7 @@ export default function TechStack() {
       </div>
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        {LAYERS.map((layer) => (
+        {layers.map((layer) => (
           <div
             key={layer.layerKey}
             className="rounded-xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-[#111726]"

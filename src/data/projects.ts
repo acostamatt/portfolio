@@ -9,7 +9,7 @@ export const projects: Project[] = [
     badgeTone: "success",
     title: "TeraSync 4.0",
     descKey: "proj_terasync",
-    tech: ["Laravel", "React", "MQTT"],
+    tech: ["Laravel", "Node-RED", "MQTT"],
     link: { href: "https://terasync.tera.ar/", labelKey: "link_live" },
     image: "/projects/terasync.png",
   },
