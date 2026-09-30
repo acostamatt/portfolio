@@ -10,7 +10,8 @@ export const projects: Project[] = [
     title: "TeraSync 4.0",
     descKey: "proj_terasync",
     tech: ["Laravel", "Node-RED", "MQTT"],
-    link: { href: "https://terasync.tera.ar/", labelKey: "link_live" },
+    link: { href: "https://terasync.tera.ar/", labelKey: "link_service" },
+    secondaryLink: { href: "https://granalier.terasync.tera.ar/", labelKey: "link_demo_granalier" },
     image: "/projects/terasync.png",
   },
   {

@@ -6,7 +6,7 @@ export type ModalType = "danone" | "odoo" | "estima" | null;
 
 export interface ProjectLink {
   href: string;
-  labelKey: "link_live" | "link_demo";
+  labelKey: "link_live" | "link_demo" | "link_service" | "link_demo_granalier";
 }
 
 export interface SatelliteLink {
@@ -34,6 +34,7 @@ export interface Project {
     | "proj_other";
   tech: string[];
   link?: ProjectLink;
+  secondaryLink?: ProjectLink;
   modal?: Extract<ModalType, "danone" | "odoo" | "estima">;
   modalActionKey?: "btn_details" | "btn_arch" | "btn_private_summary";
   satellites?: SatelliteLink[];
@@ -65,4 +66,5 @@ export interface ExperienceItem {
 export interface TeachingItem {
   name: string;
   descKey: "so" | "is1" | "is2";
+  tags?: Record<Lang, string[]>;
 }

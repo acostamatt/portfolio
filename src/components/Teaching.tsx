@@ -3,7 +3,7 @@ import { teaching } from "@/data/experience";
 import { GithubIcon } from "@/components/icons";
 
 export default function Teaching() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <section id="docencia" className="space-y-4 scroll-mt-20">
@@ -56,14 +56,33 @@ export default function Teaching() {
           {teaching.map((subject) => (
             <div
               key={subject.name}
-              className="rounded border border-slate-200 bg-slate-50 p-3 dark:border-slate-800 dark:bg-slate-900"
+              className="flex flex-col justify-between rounded-lg border border-slate-200 bg-slate-50 p-3.5 dark:border-slate-800 dark:bg-slate-900"
             >
-              <strong className="mb-0.5 block text-slate-900 dark:text-white">
-                {subject.name}
-              </strong>
-              <p className="text-[11px] text-slate-600 dark:text-slate-300">
-                {t("teaching", subject.descKey)}
-              </p>
+              <div>
+                <strong className="mb-1 block text-slate-900 dark:text-white">
+                  {subject.name}
+                </strong>
+                <p className="text-[11px] leading-relaxed text-slate-600 dark:text-slate-300">
+                  {t("teaching", subject.descKey)}
+                </p>
+              </div>
+
+              {subject.tags && (
+                <div className="mt-3 flex flex-wrap gap-1 border-t border-slate-200/70 pt-2 font-mono text-[10px] dark:border-slate-800/80">
+                  {subject.tags[lang].map((tag) => (
+                    <span
+                      key={tag}
+                      className={
+                        subject.descKey === "is2"
+                          ? "rounded border border-brand/40 bg-brand/10 px-1.5 py-0.5 font-bold text-brand dark:border-brand/50 dark:bg-brand/20 dark:text-[#7ba1ee]"
+                          : "rounded border border-slate-200 bg-white px-1.5 py-0.5 font-medium text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
+                      }
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>

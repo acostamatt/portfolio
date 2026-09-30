@@ -154,7 +154,7 @@
             </div>
             <h3 class="text-base font-bold text-slate-900 dark:text-white">TeraSync 4.0</h3>
             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_terasync_desc">
-              Telemetría industrial en tiempo real desde PLCs comunicada directamente desde Node-RED hacia backend Laravel (MQTT). Ingesta de datos y frontend reactivo.
+              Telemetría industrial en tiempo real desarrollada junto a Cooperativa Sintra (hardware, PLCs y Raspberry Pi). Integración de flujos con Node-RED hacia backend Laravel (MQTT) y pruebas piloto en planta con Granalier.
             </p>
             <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Laravel</span>
@@ -162,9 +162,13 @@
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">MQTT</span>
             </div>
           </div>
-          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap items-center justify-between gap-2 text-xs font-medium">
             <a href="https://terasync.tera.ar/" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline flex items-center gap-1">
-              <span data-i18n="link_live">Visitar Sitio</span>
+              <span data-i18n="link_service">Servicio &amp; Precios</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+            <a href="https://granalier.terasync.tera.ar/" target="_blank" rel="noopener noreferrer" class="rounded-md border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-2 py-0.5 text-[11px] text-slate-700 dark:text-slate-200 hover:text-brand flex items-center gap-1">
+              <span data-i18n="link_demo_granalier">Demo Staging (Granalier)</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
           </div>
@@ -463,9 +467,16 @@
             <strong class="text-slate-900 dark:text-white block mb-0.5">Ingeniería de Software I</strong>
             <p class="text-slate-500 dark:text-slate-400 text-[11px]" data-i18n="is1_desc">Metodologías ágiles, análisis de requerimientos y patrones.</p>
           </div>
-          <div class="p-3 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-            <strong class="text-slate-900 dark:text-white block mb-0.5">Ingeniería de Software II</strong>
-            <p class="text-slate-500 dark:text-slate-400 text-[11px]" data-i18n="is2_desc">Sistemas distribuidos, QA, CI/CD y arquitecturas.</p>
+          <div class="p-3 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+            <div>
+              <strong class="text-slate-900 dark:text-white block mb-0.5">Ingeniería de Software II</strong>
+              <p class="text-slate-500 dark:text-slate-400 text-[11px]" data-i18n="is2_desc">Diagramas de clases, estados y actividades; arquitectura de software, QA y CI/CD.</p>
+            </div>
+            <div class="mt-2.5 pt-2 border-t border-slate-200/60 dark:border-slate-800/60 flex flex-wrap gap-1 font-mono text-[10px]">
+              <span class="rounded border border-brand/40 bg-brand/10 dark:bg-brand/20 text-brand dark:text-[#7ba1ee] font-bold px-1.5 py-0.5">Diagrama de Clases</span>
+              <span class="rounded border border-brand/40 bg-brand/10 dark:bg-brand/20 text-brand dark:text-[#7ba1ee] font-bold px-1.5 py-0.5">Diagrama de Estados</span>
+              <span class="rounded border border-brand/40 bg-brand/10 dark:bg-brand/20 text-brand dark:text-[#7ba1ee] font-bold px-1.5 py-0.5">Diagrama de Actividades</span>
+            </div>
           </div>
         </div>
       </div>
@@ -493,7 +504,7 @@
           <ul class="text-xs font-mono text-slate-600 dark:text-slate-400 space-y-1">
             <li>• Odoo 18 / 19</li>
             <li>• AFIP / ARCA (WSFE)</li>
-            <li>• Node-RED (Interfaz de Conexión / Middleware)</li>
+            <li class="font-bold text-brand dark:text-[#7ba1ee]">• Node-RED (Interfaz de Conexión &amp; Middleware IoT)</li>
             <li>• Telemetría de PLCs / MQTT</li>
           </ul>
         </div>
@@ -613,7 +624,7 @@
         filter_web: "Web Apps & Gov",
         badge_prod: "Producción",
         badge_7countries: "7 Países UE",
-        proj_terasync_desc: "Telemetría industrial en tiempo real desde PLCs comunicada directamente desde Node-RED hacia backend Laravel (MQTT). Ingesta de datos y frontend reactivo.",
+        proj_terasync_desc: "Telemetría industrial en tiempo real desarrollada junto a Cooperativa Sintra (hardware, PLCs y Raspberry Pi). Integración de flujos con Node-RED hacia backend Laravel (MQTT) y pruebas piloto en planta con Granalier.",
         proj_danone_desc: "APIs REST en Laravel y Docker para sincronización multi-país de usuarios, autenticación centralizada con Gigya y optimización SQL.",
         proj_odoo_desc: "Despliegue containerizado con Docker Compose y PostgreSQL. Localización fiscal argentina y desarrollo de módulos a medida.",
         proj_estima_desc: "Motor corporativo de cálculo presupuestario con reglas de negocio dinámicas y análisis de márgenes industriales.",
@@ -624,6 +635,8 @@
         proj_other_title: "Otras Demos & Portales",
         link_live: "Visitar Sitio",
         link_demo: "Visitar Demo",
+        link_service: "Servicio & Precios",
+        link_demo_granalier: "Demo Staging (Granalier)",
         btn_details: "Detalles Técnicos",
         btn_arch: "Ver Arquitectura",
         btn_private_summary: "Resumen Confidencial",
@@ -631,7 +644,7 @@
         exp_tag: "Trayectoria",
         exp_title: "Experiencia Profesional",
         btn_cv_full: "Ver CV Completo",
-        exp_tera: "Arquitectura de TeraSync 4.0 (telemetría IIoT con Node-RED hacia backend Laravel sobre MQTT), despliegue de Odoo 18/19 en Docker con localización AFIP/ARCA y desarrollo de interfaces web en Next.js y Laravel.",
+        exp_tera: "Arquitectura de TeraSync 4.0 en conjunto con Cooperativa Sintra (hardware con PLCs y Raspberry Pi; telemetría Node-RED hacia Laravel sobre MQTT y pruebas con Granalier), despliegue de Odoo 18/19 en Docker con localización AFIP/ARCA y desarrollo web en Next.js.",
         exp_danone: "APIs en Laravel y Docker para sincronización de datos en 7 países europeos, autenticación Gigya y optimización de consultas SQL de alto volumen.",
         exp_falabella: "Refactorización de legacy para Falabella (Edducity), web scraping con Node.js/AWS Lambda para Estratégica y plataforma de gestión en Python/Django para Molino Indelma.",
         teach_tag: "Actividad Académica",
@@ -667,7 +680,7 @@
         filter_web: "Web Apps & Gov",
         badge_prod: "Production",
         badge_7countries: "7 EU Countries",
-        proj_terasync_desc: "Real-time industrial telemetry from PLCs communicated directly from Node-RED to Laravel backend (MQTT). Data ingestion and reactive UI.",
+        proj_terasync_desc: "Real-time industrial telemetry developed alongside Cooperativa Sintra (hardware engineering, PLCs, and Raspberry Pi). Data integration via Node-RED to Laravel backend (MQTT) and on-site pilot testing with Granalier.",
         proj_danone_desc: "REST APIs in Laravel and Docker for multi-country user synchronization, Gigya identity auth, and SQL query tuning.",
         proj_odoo_desc: "Containerized deployment with Docker Compose and PostgreSQL. Argentine fiscal localization and custom module development.",
         proj_estima_desc: "Corporate estimation engine with dynamic business rules, multi-tier pricing, and industrial margin simulation.",
@@ -678,6 +691,8 @@
         proj_other_title: "Additional Demos & Portals",
         link_live: "Live Platform",
         link_demo: "Explore Demo",
+        link_service: "Service & Pricing",
+        link_demo_granalier: "Staging Demo (Granalier)",
         btn_details: "Technical Specs",
         btn_arch: "Architecture",
         btn_private_summary: "Confidential Overview",
@@ -685,7 +700,7 @@
         exp_tag: "Trajectory",
         exp_title: "Professional Experience",
         btn_cv_full: "Print / Save CV",
-        exp_tera: "Architecture of TeraSync 4.0 (IIoT telemetry via Node-RED to Laravel backend over MQTT), Odoo 18/19 Docker deployments with AFIP/ARCA localization, and modern Next.js/Laravel web apps.",
+        exp_tera: "Architecture of TeraSync 4.0 in collaboration with Cooperativa Sintra (PLC & Raspberry Pi hardware; Node-RED telemetry to Laravel backend over MQTT, tested at Granalier), Odoo 18/19 Docker deployments with AFIP/ARCA localization, and Next.js web apps.",
         exp_danone: "Laravel and Docker APIs for data synchronization across 7 European countries, Gigya identity integration, and SQL performance tuning.",
         exp_falabella: "Legacy refactoring for Falabella (Edducity), web scraping with Node.js/AWS Lambda for Estratégica, and Python/Django ERP for Molino Indelma.",
         teach_tag: "Academic Activity",

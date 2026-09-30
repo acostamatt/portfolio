@@ -25,7 +25,28 @@ export const experience: ExperienceItem[] = [
 ];
 
 export const teaching: TeachingItem[] = [
-  { name: "Sistemas Operativos", descKey: "so" },
-  { name: "Ingeniería de Software I", descKey: "is1" },
-  { name: "Ingeniería de Software II", descKey: "is2" },
+  {
+    name: "Sistemas Operativos",
+    descKey: "so",
+    tags: {
+      es: ["Linux Kernel", "POSIX", "SysAdmin"],
+      en: ["Linux Kernel", "POSIX", "SysAdmin"],
+    },
+  },
+  {
+    name: "Ingeniería de Software I",
+    descKey: "is1",
+    tags: {
+      es: ["Metodologías Ágiles", "Requerimientos", "Patrones"],
+      en: ["Agile Methods", "Requirements", "Patterns"],
+    },
+  },
+  {
+    name: "Ingeniería de Software II",
+    descKey: "is2",
+    tags: {
+      es: ["Diagrama de Clases", "Diagrama de Estados", "Diagrama de Actividades"],
+      en: ["Class Diagrams", "State Diagrams", "Activity Diagrams"],
+    },
+  },
 ];

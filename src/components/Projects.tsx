@@ -188,18 +188,32 @@ function ProjectCard({ project, isPriority, onOpenModal }: ProjectCardProps) {
         </div>
 
         {/* Card Footer Actions */}
-        <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-3 text-xs font-semibold dark:border-slate-800/80">
-          {project.link && (
-            <a
-              href={project.link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-brand transition-colors hover:text-brand-hover hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-[#7ba1ee] dark:hover:text-blue-300"
-            >
-              <span>{t("projects", project.link.labelKey)}</span>
-              <ArrowUpRight size={12} />
-            </a>
-          )}
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-2 border-t border-slate-100 pt-3 text-xs font-semibold dark:border-slate-800/80">
+          <div className="flex flex-wrap items-center gap-2.5">
+            {project.link && (
+              <a
+                href={project.link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-brand transition-colors hover:text-brand-hover hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:text-[#7ba1ee] dark:hover:text-blue-300"
+              >
+                <span>{t("projects", project.link.labelKey)}</span>
+                <ArrowUpRight size={12} />
+              </a>
+            )}
+
+            {project.secondaryLink && (
+              <a
+                href={project.secondaryLink.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 rounded-md border border-slate-200 bg-slate-50 px-2 py-0.5 text-[11px] font-medium text-slate-700 transition-colors hover:border-brand hover:text-brand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand dark:border-slate-700/80 dark:bg-slate-800/80 dark:text-slate-200 dark:hover:border-brand dark:hover:text-[#7ba1ee]"
+              >
+                <span>{t("projects", project.secondaryLink.labelKey)}</span>
+                <ArrowUpRight size={11} />
+              </a>
+            )}
+          </div>
 
           {project.modal && (
             <button
@@ -235,7 +249,7 @@ function ProjectCard({ project, isPriority, onOpenModal }: ProjectCardProps) {
             </span>
           )}
 
-          {!project.link && !project.modal && !project.satellitesFooterKey && (
+          {!project.link && !project.secondaryLink && !project.modal && !project.satellitesFooterKey && (
             <span className="text-slate-400 dark:text-slate-600">—</span>
           )}
         </div>

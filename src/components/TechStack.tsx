@@ -20,8 +20,8 @@ export default function TechStack() {
         "Odoo 18 / 19",
         "AFIP / ARCA (WSFE)",
         isEn
-          ? "Node-RED (Connection Interface / Middleware)"
-          : "Node-RED (Interfaz de Conexión / Middleware)",
+          ? "Node-RED (IoT Connection Interface & Middleware)"
+          : "Node-RED (Interfaz de Conexión & Middleware IoT)",
         isEn ? "PLC Telemetry / MQTT" : "Telemetría de PLCs / MQTT",
       ],
     },
@@ -55,10 +55,23 @@ export default function TechStack() {
             <h3 className="mb-2 text-xs font-bold text-slate-900 dark:text-white">
               {t("stack", layer.layerKey)}
             </h3>
-            <ul className="space-y-1 font-mono text-xs text-slate-600 dark:text-slate-300">
-              {layer.items.map((item) => (
-                <li key={item}>• {item}</li>
-              ))}
+            <ul className="space-y-1.5 font-mono text-xs text-slate-600 dark:text-slate-300">
+              {layer.items.map((item) => {
+                const isHighlighted = item.includes("Node-RED");
+                return (
+                  <li
+                    key={item}
+                    className={
+                      isHighlighted
+                        ? "flex items-center gap-1 font-bold text-brand dark:text-[#7ba1ee]"
+                        : "flex items-center gap-1"
+                    }
+                  >
+                    <span>•</span>
+                    <span>{item}</span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}
