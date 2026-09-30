@@ -50,7 +50,7 @@ const ROW_2: Brand[] = [
   {
     name: "Granalier",
     logo: "/logos/granalier.png",
-    className: "max-h-10 sm:max-h-12 dark:brightness-125",
+    className: "max-h-14 sm:max-h-16 scale-110 sm:scale-115 dark:brightness-125",
   },
   {
     name: "Odoo ERP",
