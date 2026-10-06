@@ -5,13 +5,12 @@ import { Check, Mail } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { GithubIcon, LinkedinIcon, WhatsappIcon } from "@/components/icons";
 
-const EMAIL = "macosta@tera.coop.ar";
+const EMAIL = "acostamatias.1989@gmail.com";
 const WHATSAPP_URL = "https://wa.me/5493415152771";
 const LINKEDIN_URL = "https://www.linkedin.com/in/acostamati";
 
 const REPOS = [
   { label: "acostamatt (Personal)", href: "https://github.com/acostamatt" },
-  { label: "CoopTera (Cooperativa)", href: "https://github.com/CoopTera/" },
   { label: "acosta4038 (Educativo)", href: "https://github.com/acosta4038" },
 ];
 

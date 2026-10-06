@@ -16,10 +16,9 @@
 - All dynamic copy must be mapped in `/src/data/translations.ts` (`es` and `en`).
 - GitHub accounts:
   - Personal: `https://github.com/acostamatt`
-  - Cooperative: `https://github.com/CoopTera/`
   - Academic: `https://github.com/acosta4038`
 - Direct Contact:
-  - Email: `macosta@tera.coop.ar`
+  - Email: `acostamatias.1989@gmail.com`
   - WhatsApp: `+5493415152771`
   - LinkedIn: `https://www.linkedin.com/in/acostamati`
 

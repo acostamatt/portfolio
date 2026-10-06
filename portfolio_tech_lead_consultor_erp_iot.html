@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" class="dark scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +9,9 @@
   <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
   <!-- FontAwesome 6 CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -37,45 +40,60 @@
   </script>
 </head>
 
-<body class="bg-[#F8FAFC] dark:bg-[#0A0E17] text-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-200 selection:bg-brand selection:text-white">
+<body
+  class="bg-[#F8FAFC] dark:bg-[#0A0E17] text-slate-900 dark:text-slate-100 font-sans antialiased transition-colors duration-200 selection:bg-brand selection:text-white">
 
   <!-- ==================== HEADER ==================== -->
-  <header class="sticky top-0 z-40 bg-white/90 dark:bg-[#0A0E17]/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+  <header
+    class="sticky top-0 z-40 bg-white/90 dark:bg-[#0A0E17]/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
 
       <!-- Brand -->
       <a href="#" class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-lg bg-brand flex items-center justify-center text-white font-mono font-bold text-sm">
+        <div
+          class="w-9 h-9 rounded-lg bg-brand flex items-center justify-center text-white font-mono font-bold text-sm">
           MA
         </div>
         <div>
           <span class="font-bold text-sm text-slate-900 dark:text-white tracking-tight block">Matias Acosta</span>
-          <span class="text-xs text-slate-500 dark:text-slate-400 font-mono" data-i18n="nav_role">Full Stack &bull; Rosario, AR</span>
+          <span class="text-xs text-slate-500 dark:text-slate-400 font-mono" data-i18n="nav_role">Full Stack &bull;
+            Rosario, AR</span>
         </div>
       </a>
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
-        <a href="#proyectos" class="hover:text-brand dark:hover:text-brand transition-colors" data-i18n="nav_projects">Proyectos</a>
-        <a href="#experiencia" class="hover:text-brand dark:hover:text-brand transition-colors" data-i18n="nav_experience">Experiencia</a>
-        <a href="#docencia" class="hover:text-brand dark:hover:text-brand transition-colors" data-i18n="nav_teaching">Docencia</a>
-        <a href="#stack" class="hover:text-brand dark:hover:text-brand transition-colors" data-i18n="nav_stack">Stack</a>
-        <a href="#contacto" class="hover:text-brand dark:hover:text-brand transition-colors" data-i18n="nav_contact">Contacto</a>
+        <a href="#proyectos" class="hover:text-brand dark:hover:text-brand transition-colors"
+          data-i18n="nav_projects">Proyectos</a>
+        <a href="#experiencia" class="hover:text-brand dark:hover:text-brand transition-colors"
+          data-i18n="nav_experience">Experiencia</a>
+        <a href="#docencia" class="hover:text-brand dark:hover:text-brand transition-colors"
+          data-i18n="nav_teaching">Docencia</a>
+        <a href="#stack" class="hover:text-brand dark:hover:text-brand transition-colors"
+          data-i18n="nav_stack">Stack</a>
+        <a href="#contacto" class="hover:text-brand dark:hover:text-brand transition-colors"
+          data-i18n="nav_contact">Contacto</a>
       </nav>
 
       <!-- Actions: Lang & Theme Toggles -->
       <div class="flex items-center gap-2.5">
         <!-- Language Switcher -->
-        <button id="langToggle" class="px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-semibold text-slate-700 dark:text-slate-300 hover:border-brand transition-colors" aria-label="Cambiar Idioma">
+        <button id="langToggle"
+          class="px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-xs font-mono font-semibold text-slate-700 dark:text-slate-300 hover:border-brand transition-colors"
+          aria-label="Cambiar Idioma">
           <span id="langLabel">EN</span>
         </button>
 
         <!-- Theme Switcher -->
-        <button id="themeToggle" class="w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:border-brand transition-colors" aria-label="Cambiar Tema">
+        <button id="themeToggle"
+          class="w-9 h-9 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:border-brand transition-colors"
+          aria-label="Cambiar Tema">
           <i id="themeIcon" class="fa-solid fa-moon"></i>
         </button>
 
-        <a href="#contacto" class="hidden sm:inline-flex px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand hover:bg-brand-hover text-white transition-colors" data-i18n="nav_cta">
+        <a href="#contacto"
+          class="hidden sm:inline-flex px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand hover:bg-brand-hover text-white transition-colors"
+          data-i18n="nav_cta">
           Contactar
         </a>
       </div>
@@ -89,29 +107,37 @@
     <section class="py-6 sm:py-10 border-b border-slate-200 dark:border-slate-800/80">
       <div class="max-w-3xl space-y-6">
 
-        <div class="inline-flex items-center px-3 py-1 rounded-md text-xs font-mono bg-slate-200/70 dark:bg-slate-800/70 text-slate-700 dark:text-slate-300 border border-slate-300/50 dark:border-slate-700">
+        <div
+          class="inline-flex items-center px-3 py-1 rounded-md text-xs font-mono bg-slate-200/70 dark:bg-slate-800/70 text-slate-700 dark:text-slate-300 border border-slate-300/50 dark:border-slate-700">
           <span data-i18n="hero_badge">Socio en Cooperativa Tera &bull; Rosario, AR</span>
         </div>
 
-        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.2]" data-i18n="hero_title">
+        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.2]"
+          data-i18n="hero_title">
           Desarrollo Full Stack, Ecosistemas ERP &amp; Telemetría IIoT.
         </h1>
 
         <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed" data-i18n="hero_desc">
-          Especialista en desarrollo e integración de sistemas. Implementación y customización de Odoo ERP 18/19 con localización fiscal AFIP/ARCA, plataformas de telemetría industrial en tiempo real y APIs multi-región.
+          Especialista en desarrollo e integración de sistemas. Implementación y customización de Odoo ERP 18/19 con
+          localización fiscal AFIP/ARCA, plataformas de telemetría industrial en tiempo real y APIs multi-región.
         </p>
 
         <div class="pt-2 flex flex-wrap items-center gap-4 text-sm font-medium">
-          <a href="#proyectos" class="px-5 py-2.5 rounded-lg bg-brand hover:bg-brand-hover text-white transition-colors flex items-center gap-2">
+          <a href="#proyectos"
+            class="px-5 py-2.5 rounded-lg bg-brand hover:bg-brand-hover text-white transition-colors flex items-center gap-2">
             <span data-i18n="hero_cta_projects">Ver Proyectos</span>
             <i class="fa-solid fa-arrow-right text-xs"></i>
           </a>
 
           <div class="flex items-center gap-2">
-            <a href="https://github.com/acostamatt" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:border-brand text-xs font-mono flex items-center gap-1.5 transition-colors" title="GitHub Personal">
+            <a href="https://github.com/acostamatt" target="_blank" rel="noopener noreferrer"
+              class="px-3.5 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:border-brand text-xs font-mono flex items-center gap-1.5 transition-colors"
+              title="GitHub Personal">
               <i class="fa-brands fa-github text-sm"></i> acostamatt
             </a>
-            <a href="https://www.linkedin.com/in/acostamati" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:border-brand text-xs font-mono flex items-center gap-1.5 transition-colors" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/acostamati" target="_blank" rel="noopener noreferrer"
+              class="px-3.5 py-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-200 hover:border-brand text-xs font-mono flex items-center gap-1.5 transition-colors"
+              title="LinkedIn">
               <i class="fa-brands fa-linkedin text-sm"></i> acostamati
             </a>
           </div>
@@ -125,8 +151,10 @@
 
       <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3">
         <div>
-          <span class="text-xs font-mono font-semibold uppercase text-brand tracking-wider" data-i18n="projects_tag">Portfolio Técnico</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1" data-i18n="projects_title">Proyectos &amp; Plataformas</h2>
+          <span class="text-xs font-mono font-semibold uppercase text-brand tracking-wider"
+            data-i18n="projects_tag">Portfolio Técnico</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1" data-i18n="projects_title">
+            Proyectos &amp; Plataformas</h2>
         </div>
         <p class="text-sm text-slate-500 dark:text-slate-400 max-w-md" data-i18n="projects_subtitle">
           Soluciones implementadas en producción, plataformas institucionales y demostraciones técnicas.
@@ -135,18 +163,29 @@
 
       <!-- Filtros -->
       <div class="flex flex-wrap gap-2 text-xs font-mono" id="filtersContainer">
-        <button data-filter="all" class="filter-btn active px-3 py-1.5 rounded-md bg-brand text-white transition-colors" data-i18n="filter_all">Todos</button>
-        <button data-filter="iiot" class="filter-btn px-3 py-1.5 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" data-i18n="filter_iiot">IIoT &amp; Telemetría</button>
-        <button data-filter="erp" class="filter-btn px-3 py-1.5 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" data-i18n="filter_erp">ERP &amp; AFIP/ARCA</button>
-        <button data-filter="enterprise" class="filter-btn px-3 py-1.5 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" data-i18n="filter_enterprise">Enterprise &amp; APIs</button>
-        <button data-filter="web" class="filter-btn px-3 py-1.5 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors" data-i18n="filter_web">Web Apps &amp; Gov</button>
+        <button data-filter="all" class="filter-btn active px-3 py-1.5 rounded-md bg-brand text-white transition-colors"
+          data-i18n="filter_all">Todos</button>
+        <button data-filter="iiot"
+          class="filter-btn px-3 py-1.5 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors"
+          data-i18n="filter_iiot">IIoT &amp; Telemetría</button>
+        <button data-filter="erp"
+          class="filter-btn px-3 py-1.5 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors"
+          data-i18n="filter_erp">ERP &amp; AFIP/ARCA</button>
+        <button data-filter="enterprise"
+          class="filter-btn px-3 py-1.5 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors"
+          data-i18n="filter_enterprise">Enterprise &amp; APIs</button>
+        <button data-filter="web"
+          class="filter-btn px-3 py-1.5 rounded-md bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors"
+          data-i18n="filter_web">Web Apps &amp; Gov</button>
       </div>
 
       <!-- Grilla de Proyectos -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="projectsGrid">
 
         <!-- TeraSync 4.0 -->
-        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="iiot">
+        <div
+          class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between"
+          data-category="iiot">
           <div class="space-y-2.5">
             <div class="flex items-center justify-between text-xs font-mono">
               <span class="text-brand font-semibold">IIoT Platform</span>
@@ -154,7 +193,9 @@
             </div>
             <h3 class="text-base font-bold text-slate-900 dark:text-white">TeraSync 4.0</h3>
             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_terasync_desc">
-              Telemetría industrial en tiempo real desarrollada junto a Cooperativa Sintra (hardware, PLCs y Raspberry Pi). Integración de flujos con Node-RED hacia backend Laravel (MQTT) y pruebas piloto en planta con Granalier.
+              Telemetría industrial en tiempo real desarrollada junto a Cooperativa Sintra (hardware, PLCs y Raspberry
+              Pi). Integración de flujos con Node-RED hacia backend Laravel (MQTT) y pruebas piloto en planta con
+              Granalier.
             </p>
             <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Laravel</span>
@@ -162,12 +203,15 @@
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">MQTT</span>
             </div>
           </div>
-          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap items-center justify-between gap-2 text-xs font-medium">
-            <a href="https://terasync.tera.ar/" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline flex items-center gap-1">
+          <div
+            class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex flex-wrap items-center justify-between gap-2 text-xs font-medium">
+            <a href="https://terasync.tera.ar/" target="_blank" rel="noopener noreferrer"
+              class="text-brand hover:underline flex items-center gap-1">
               <span data-i18n="link_service">Servicio &amp; Precios</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
-            <a href="https://granalier.terasync.tera.ar/" target="_blank" rel="noopener noreferrer" class="rounded-md border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-2 py-0.5 text-[11px] text-slate-700 dark:text-slate-200 hover:text-brand flex items-center gap-1">
+            <a href="https://granalier.terasync.tera.ar/" target="_blank" rel="noopener noreferrer"
+              class="rounded-md border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 px-2 py-0.5 text-[11px] text-slate-700 dark:text-slate-200 hover:text-brand flex items-center gap-1">
               <span data-i18n="link_demo_granalier">Demo Staging (Granalier)</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
@@ -175,7 +219,9 @@
         </div>
 
         <!-- Danone Europa -->
-        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="enterprise">
+        <div
+          class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between"
+          data-category="enterprise">
           <div class="space-y-2.5">
             <div class="flex items-center justify-between text-xs font-mono">
               <span class="text-brand font-semibold">Multi-Region API</span>
@@ -183,7 +229,8 @@
             </div>
             <h3 class="text-base font-bold text-slate-900 dark:text-white">Danone Europa (Devecoop)</h3>
             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_danone_desc">
-              APIs REST en Laravel y Docker para sincronización multi-país de usuarios, autenticación centralizada con Gigya y optimización SQL.
+              APIs REST en Laravel y Docker para sincronización multi-país de usuarios, autenticación centralizada con
+              Gigya y optimización SQL.
             </p>
             <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Laravel</span>
@@ -191,7 +238,8 @@
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Gigya</span>
             </div>
           </div>
-          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+          <div
+            class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
             <button onclick="openModal('danone')" class="text-brand hover:underline flex items-center gap-1">
               <span data-i18n="btn_details">Detalles Técnicos</span>
               <i class="fa-solid fa-circle-info text-[10px]"></i>
@@ -200,7 +248,9 @@
         </div>
 
         <!-- Odoo 18/19 & AFIP/ARCA -->
-        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="erp">
+        <div
+          class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between"
+          data-category="erp">
           <div class="space-y-2.5">
             <div class="flex items-center justify-between text-xs font-mono">
               <span class="text-brand font-semibold">ERP Infrastructure</span>
@@ -208,7 +258,8 @@
             </div>
             <h3 class="text-base font-bold text-slate-900 dark:text-white">Odoo 18/19 &amp; AFIP/ARCA</h3>
             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_odoo_desc">
-              Despliegue containerizado con Docker Compose y PostgreSQL. Localización fiscal argentina y desarrollo de módulos a medida.
+              Despliegue containerizado con Docker Compose y PostgreSQL. Localización fiscal argentina y desarrollo de
+              módulos a medida.
             </p>
             <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Python</span>
@@ -216,7 +267,8 @@
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">AFIP/ARCA</span>
             </div>
           </div>
-          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+          <div
+            class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
             <button onclick="openModal('odoo')" class="text-brand hover:underline flex items-center gap-1">
               <span data-i18n="btn_arch">Ver Arquitectura</span>
               <i class="fa-solid fa-circle-info text-[10px]"></i>
@@ -225,7 +277,9 @@
         </div>
 
         <!-- Estima (Privado) -->
-        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="enterprise">
+        <div
+          class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between"
+          data-category="enterprise">
           <div class="space-y-2.5">
             <div class="flex items-center justify-between text-xs font-mono">
               <span class="text-brand font-semibold">Presupuestación</span>
@@ -233,15 +287,18 @@
             </div>
             <h3 class="text-base font-bold text-slate-900 dark:text-white">Estima</h3>
             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_estima_desc">
-              Motor corporativo de cálculo presupuestario con reglas de negocio dinámicas y análisis de márgenes industriales.
+              Motor corporativo de cálculo presupuestario con reglas de negocio dinámicas y análisis de márgenes
+              industriales.
             </p>
             <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">React</span>
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Business Engine</span>
             </div>
           </div>
-          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
-            <button onclick="openModal('estima')" class="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 flex items-center gap-1">
+          <div
+            class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <button onclick="openModal('estima')"
+              class="text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 flex items-center gap-1">
               <i class="fa-solid fa-lock text-[10px]"></i>
               <span data-i18n="btn_private_summary">Resumen Confidencial</span>
             </button>
@@ -249,7 +306,9 @@
         </div>
 
         <!-- Agrorecetas -->
-        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="web">
+        <div
+          class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between"
+          data-category="web">
           <div class="space-y-2.5">
             <div class="flex items-center justify-between text-xs font-mono">
               <span class="text-brand font-semibold">AgroTech</span>
@@ -257,15 +316,18 @@
             </div>
             <h3 class="text-base font-bold text-slate-900 dark:text-white">Agrorecetas</h3>
             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_agro_desc">
-              Emisión y auditoría de recetas agronómicas digitales, lotes georreferenciados y trazabilidad fitosanitaria.
+              Emisión y auditoría de recetas agronómicas digitales, lotes georreferenciados y trazabilidad
+              fitosanitaria.
             </p>
             <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Laravel</span>
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">GIS Maps</span>
             </div>
           </div>
-          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
-            <a href="https://agrorecetas.test.tera.ar" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline flex items-center gap-1">
+          <div
+            class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <a href="https://agrorecetas.test.tera.ar" target="_blank" rel="noopener noreferrer"
+              class="text-brand hover:underline flex items-center gap-1">
               <span data-i18n="link_demo">Visitar Demo</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
@@ -273,7 +335,9 @@
         </div>
 
         <!-- Edducity -->
-        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="enterprise">
+        <div
+          class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between"
+          data-category="enterprise">
           <div class="space-y-2.5">
             <div class="flex items-center justify-between text-xs font-mono">
               <span class="text-brand font-semibold">Falabella</span>
@@ -288,8 +352,10 @@
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">MySQL Tuning</span>
             </div>
           </div>
-          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
-            <a href="https://www.edducity.com" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline flex items-center gap-1">
+          <div
+            class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <a href="https://www.edducity.com" target="_blank" rel="noopener noreferrer"
+              class="text-brand hover:underline flex items-center gap-1">
               <span data-i18n="link_live">Visitar Sitio</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
@@ -297,7 +363,9 @@
         </div>
 
         <!-- Trámite Digital -->
-        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="web">
+        <div
+          class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between"
+          data-category="web">
           <div class="space-y-2.5">
             <div class="flex items-center justify-between text-xs font-mono">
               <span class="text-brand font-semibold">GovTech</span>
@@ -305,15 +373,18 @@
             </div>
             <h3 class="text-base font-bold text-slate-900 dark:text-white">Trámite Digital &amp; Pagos</h3>
             <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="proj_tramite_desc">
-              Autogestión ciudadana de trámites con pasarela de pagos integrada vía Mercado Pago y webhooks en tiempo real.
+              Autogestión ciudadana de trámites con pasarela de pagos integrada vía Mercado Pago y webhooks en tiempo
+              real.
             </p>
             <div class="flex flex-wrap gap-1 text-[11px] font-mono text-slate-600 dark:text-slate-400">
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">MP API</span>
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">Laravel</span>
             </div>
           </div>
-          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
-            <a href="https://tramite.test.tera.ar/login" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline flex items-center gap-1">
+          <div
+            class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <a href="https://tramite.test.tera.ar/login" target="_blank" rel="noopener noreferrer"
+              class="text-brand hover:underline flex items-center gap-1">
               <span data-i18n="link_demo">Visitar Demo</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
@@ -321,7 +392,9 @@
         </div>
 
         <!-- Facturador AFIP -->
-        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="erp">
+        <div
+          class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between"
+          data-category="erp">
           <div class="space-y-2.5">
             <div class="flex items-center justify-between text-xs font-mono">
               <span class="text-brand font-semibold">Fiscal</span>
@@ -336,8 +409,10 @@
               <span class="px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800">PHP</span>
             </div>
           </div>
-          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
-            <a href="https://facturador.test.tera.ar/" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline flex items-center gap-1">
+          <div
+            class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-medium">
+            <a href="https://facturador.test.tera.ar/" target="_blank" rel="noopener noreferrer"
+              class="text-brand hover:underline flex items-center gap-1">
               <span data-i18n="link_demo">Visitar Demo</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
             </a>
@@ -345,35 +420,45 @@
         </div>
 
         <!-- Demos & Otras Implementaciones -->
-        <div class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between" data-category="web">
+        <div
+          class="project-card rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] p-5 flex flex-col justify-between"
+          data-category="web">
           <div class="space-y-2.5">
             <div class="flex items-center justify-between text-xs font-mono">
               <span class="text-brand font-semibold">Tera Ecosystem</span>
               <span class="text-slate-500">+6 Apps</span>
             </div>
-            <h3 class="text-base font-bold text-slate-900 dark:text-white" data-i18n="proj_other_title">Otras Demos &amp; Portales</h3>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white" data-i18n="proj_other_title">Otras Demos
+              &amp; Portales</h3>
             <div class="grid grid-cols-2 gap-1.5 pt-1 text-xs">
-              <a href="https://apps.tera.coop.ar/" target="_blank" class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
+              <a href="https://apps.tera.coop.ar/" target="_blank"
+                class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
                 <span>Apps Tera</span> <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-slate-400"></i>
               </a>
-              <a href="https://aprepa.test.tera.ar" target="_blank" class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
+              <a href="https://aprepa.test.tera.ar" target="_blank"
+                class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
                 <span>Aprepa</span> <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-slate-400"></i>
               </a>
-              <a href="https://cotizador.test.tera.ar/" target="_blank" class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
+              <a href="https://cotizador.test.tera.ar/" target="_blank"
+                class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
                 <span>Cotizador</span> <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-slate-400"></i>
               </a>
-              <a href="https://demo.concejoarmstrong.gob.ar/" target="_blank" class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
+              <a href="https://demo.concejoarmstrong.gob.ar/" target="_blank"
+                class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
                 <span>Concejo</span> <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-slate-400"></i>
               </a>
-              <a href="https://jymindustrias.test.tera.ar/" target="_blank" class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
+              <a href="https://jymindustrias.test.tera.ar/" target="_blank"
+                class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
                 <span>J&amp;M</span> <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-slate-400"></i>
               </a>
-              <a href="https://tshirt.test.tera.ar/" target="_blank" class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
+              <a href="https://tshirt.test.tera.ar/" target="_blank"
+                class="p-1.5 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand flex items-center justify-between">
                 <span>T-Shirt</span> <i class="fa-solid fa-arrow-up-right-from-square text-[8px] text-slate-400"></i>
               </a>
             </div>
           </div>
-          <div class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-500">
+          <div
+            class="pt-4 mt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-mono text-slate-500">
             <span data-i18n="text_live_demos">Demos Activas</span>
           </div>
         </div>
@@ -386,10 +471,13 @@
 
       <div class="flex items-center justify-between">
         <div>
-          <span class="text-xs font-mono font-semibold uppercase text-brand tracking-wider" data-i18n="exp_tag">Trayectoria</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1" data-i18n="exp_title">Experiencia Profesional</h2>
+          <span class="text-xs font-mono font-semibold uppercase text-brand tracking-wider"
+            data-i18n="exp_tag">Trayectoria</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1" data-i18n="exp_title">
+            Experiencia Profesional</h2>
         </div>
-        <button onclick="window.print()" class="text-xs font-mono text-slate-500 hover:text-brand flex items-center gap-1.5">
+        <button onclick="window.print()"
+          class="text-xs font-mono text-slate-500 hover:text-brand flex items-center gap-1.5">
           <i class="fa-solid fa-file-pdf"></i>
           <span data-i18n="btn_cv_full">Ver CV Completo</span>
         </button>
@@ -401,38 +489,46 @@
         <div class="relative">
           <span class="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3 h-3 rounded-full bg-brand"></span>
           <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-0.5">
-            <h3 class="text-sm font-bold text-slate-900 dark:text-white">Tech Lead Full Stack &amp; Consultor ERP / IoT</h3>
+            <h3 class="text-sm font-bold text-slate-900 dark:text-white">Tech Lead Full Stack &amp; Consultor ERP / IoT
+            </h3>
             <span class="text-xs font-mono text-slate-500">Oct 2023 – Presente</span>
           </div>
           <div class="text-xs font-semibold text-brand mb-1.5">Cooperativa Tera</div>
           <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="exp_tera">
-            Arquitectura de TeraSync 4.0 (telemetría IIoT sobre MQTT), despliegue de Odoo 18/19 en Docker con localización AFIP/ARCA y desarrollo de interfaces web en Next.js y Laravel.
+            Arquitectura de TeraSync 4.0 (telemetría IIoT sobre MQTT), despliegue de Odoo 18/19 en Docker con
+            localización AFIP/ARCA y desarrollo de interfaces web en Next.js y Laravel.
           </p>
         </div>
 
         <!-- Rol 2 -->
         <div class="relative">
-          <span class="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-700"></span>
+          <span
+            class="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-700"></span>
           <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-0.5">
-            <h3 class="text-sm font-bold text-slate-900 dark:text-white">Desarrollador Full Stack SSR / Senior (APIs Multi-Región)</h3>
+            <h3 class="text-sm font-bold text-slate-900 dark:text-white">Desarrollador Full Stack SSR / Senior (APIs
+              Multi-Región)</h3>
             <span class="text-xs font-mono text-slate-500">Abr 2023 – Feb 2025</span>
           </div>
           <div class="text-xs font-semibold text-brand mb-1.5">Danone Europa (vía Tera / Devecoop)</div>
           <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="exp_danone">
-            APIs en Laravel y Docker para sincronización de datos en 7 países europeos, autenticación Gigya y optimización de consultas SQL de alto volumen.
+            APIs en Laravel y Docker para sincronización de datos en 7 países europeos, autenticación Gigya y
+            optimización de consultas SQL de alto volumen.
           </p>
         </div>
 
         <!-- Rol 3 -->
         <div class="relative">
-          <span class="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-700"></span>
+          <span
+            class="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-700"></span>
           <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-0.5">
-            <h3 class="text-sm font-bold text-slate-900 dark:text-white">Desarrollador Full Stack (Backend &amp; Cloud)</h3>
+            <h3 class="text-sm font-bold text-slate-900 dark:text-white">Desarrollador Full Stack (Backend &amp; Cloud)
+            </h3>
             <span class="text-xs font-mono text-slate-500">Abr 2021 – Presente</span>
           </div>
           <div class="text-xs font-semibold text-brand mb-1.5">Falabella Financiero / Estratégica / Molino Indelma</div>
           <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="exp_falabella">
-            Refactorización de legacy para Falabella (Edducity), web scraping con Node.js/AWS Lambda para Estratégica y plataforma de gestión en Python/Django para Molino Indelma.
+            Refactorización de legacy para Falabella (Edducity), web scraping con Node.js/AWS Lambda para Estratégica y
+            plataforma de gestión en Python/Django para Molino Indelma.
           </p>
         </div>
 
@@ -442,18 +538,23 @@
     <!-- ==================== DOCENCIA ==================== -->
     <section id="docencia" class="space-y-4">
       <div>
-        <span class="text-xs font-mono font-semibold uppercase text-brand tracking-wider" data-i18n="teach_tag">Actividad Académica</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1" data-i18n="teach_title">Docencia Terciaria</h2>
+        <span class="text-xs font-mono font-semibold uppercase text-brand tracking-wider"
+          data-i18n="teach_tag">Actividad Académica</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1" data-i18n="teach_title">Docencia
+          Terciaria</h2>
       </div>
 
       <div class="p-5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#111726] space-y-3">
         <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-          <h3 class="text-sm font-bold text-slate-900 dark:text-white" data-i18n="teach_role">Profesor en Nivel Superior en Desarrollo de Software</h3>
+          <h3 class="text-sm font-bold text-slate-900 dark:text-white" data-i18n="teach_role">Profesor en Nivel Superior
+            en Desarrollo de Software</h3>
           <span class="text-xs font-mono text-slate-500">Mayo 2021 – Actualidad</span>
         </div>
         <div class="flex items-center justify-between">
-          <span class="text-xs font-semibold text-brand">Instituto Superior Particular N° 4038 "Juan Pablo II" (Roldán, Santa Fe)</span>
-          <a href="https://github.com/acosta4038" target="_blank" rel="noopener noreferrer" class="text-xs font-mono text-slate-500 hover:text-brand flex items-center gap-1">
+          <span class="text-xs font-semibold text-brand">Instituto Superior Particular N° 4038 "Juan Pablo II" (Roldán,
+            Santa Fe)</span>
+          <a href="https://github.com/acosta4038" target="_blank" rel="noopener noreferrer"
+            class="text-xs font-mono text-slate-500 hover:text-brand flex items-center gap-1">
             <i class="fa-brands fa-github"></i> github.com/acosta4038
           </a>
         </div>
@@ -461,21 +562,32 @@
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 text-xs">
           <div class="p-3 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
             <strong class="text-slate-900 dark:text-white block mb-0.5">Sistemas Operativos</strong>
-            <p class="text-slate-500 dark:text-slate-400 text-[11px]" data-i18n="so_desc">Procesos, memoria, POSIX, Linux Kernel y SysAdmin.</p>
+            <p class="text-slate-500 dark:text-slate-400 text-[11px]" data-i18n="so_desc">Procesos, memoria, POSIX,
+              Linux Kernel y SysAdmin.</p>
           </div>
           <div class="p-3 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
             <strong class="text-slate-900 dark:text-white block mb-0.5">Ingeniería de Software I</strong>
-            <p class="text-slate-500 dark:text-slate-400 text-[11px]" data-i18n="is1_desc">Metodologías ágiles, análisis de requerimientos y patrones.</p>
+            <p class="text-slate-500 dark:text-slate-400 text-[11px]" data-i18n="is1_desc">Metodologías ágiles, análisis
+              de requerimientos y patrones.</p>
           </div>
-          <div class="p-3 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+          <div
+            class="p-3 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
             <div>
               <strong class="text-slate-900 dark:text-white block mb-0.5">Ingeniería de Software II</strong>
-              <p class="text-slate-500 dark:text-slate-400 text-[11px]" data-i18n="is2_desc">Diagramas de clases, estados y actividades; arquitectura de software, QA y CI/CD.</p>
+              <p class="text-slate-500 dark:text-slate-400 text-[11px]" data-i18n="is2_desc">Diagramas de clases,
+                estados y actividades; arquitectura de software, QA y CI/CD.</p>
             </div>
-            <div class="mt-2.5 pt-2 border-t border-slate-200/60 dark:border-slate-800/60 flex flex-wrap gap-1 font-mono text-[10px]">
-              <span class="rounded border border-brand/40 bg-brand/10 dark:bg-brand/20 text-brand dark:text-[#7ba1ee] font-bold px-1.5 py-0.5">Diagrama de Clases</span>
-              <span class="rounded border border-brand/40 bg-brand/10 dark:bg-brand/20 text-brand dark:text-[#7ba1ee] font-bold px-1.5 py-0.5">Diagrama de Estados</span>
-              <span class="rounded border border-brand/40 bg-brand/10 dark:bg-brand/20 text-brand dark:text-[#7ba1ee] font-bold px-1.5 py-0.5">Diagrama de Actividades</span>
+            <div
+              class="mt-2.5 pt-2 border-t border-slate-200/60 dark:border-slate-800/60 flex flex-wrap gap-1 font-mono text-[10px]">
+              <span
+                class="rounded border border-brand/40 bg-brand/10 dark:bg-brand/20 text-brand dark:text-[#7ba1ee] font-bold px-1.5 py-0.5">Diagrama
+                de Clases</span>
+              <span
+                class="rounded border border-brand/40 bg-brand/10 dark:bg-brand/20 text-brand dark:text-[#7ba1ee] font-bold px-1.5 py-0.5">Diagrama
+                de Estados</span>
+              <span
+                class="rounded border border-brand/40 bg-brand/10 dark:bg-brand/20 text-brand dark:text-[#7ba1ee] font-bold px-1.5 py-0.5">Diagrama
+                de Actividades</span>
             </div>
           </div>
         </div>
@@ -485,8 +597,10 @@
     <!-- ==================== STACK ==================== -->
     <section id="stack" class="space-y-4">
       <div>
-        <span class="text-xs font-mono font-semibold uppercase text-brand tracking-wider" data-i18n="stack_tag">Capacidades</span>
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1" data-i18n="stack_title">Stack Tecnológico</h2>
+        <span class="text-xs font-mono font-semibold uppercase text-brand tracking-wider"
+          data-i18n="stack_tag">Capacidades</span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mt-1" data-i18n="stack_title">Stack
+          Tecnológico</h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
@@ -504,7 +618,8 @@
           <ul class="text-xs font-mono text-slate-600 dark:text-slate-400 space-y-1">
             <li>• Odoo 18 / 19</li>
             <li>• AFIP / ARCA (WSFE)</li>
-            <li class="font-bold text-brand dark:text-[#7ba1ee]">• Node-RED (Interfaz de Conexión &amp; Middleware IoT)</li>
+            <li class="font-bold text-brand dark:text-[#7ba1ee]">• Node-RED (Interfaz de Conexión &amp; Middleware IoT)
+            </li>
             <li>• Telemetría de PLCs / MQTT</li>
           </ul>
         </div>
@@ -540,32 +655,34 @@
 
         <div class="flex flex-wrap items-center gap-2">
           <!-- WhatsApp Directo -->
-          <a href="https://wa.me/5493415152771" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500 hover:text-white text-xs font-mono font-medium transition-colors flex items-center gap-1.5">
+          <a href="https://wa.me/5493415152771" target="_blank" rel="noopener noreferrer"
+            class="px-3 py-1.5 rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-500 hover:text-white text-xs font-mono font-medium transition-colors flex items-center gap-1.5">
             <i class="fa-brands fa-whatsapp text-sm"></i> +54 9 341 515-2771
           </a>
 
           <!-- Email -->
-          <a href="mailto:macosta@tera.coop.ar" class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-brand text-xs font-mono transition-colors flex items-center gap-1.5">
-            <i class="fa-regular fa-envelope"></i> macosta@tera.coop.ar
+          <a href="mailto:acostamatias.1989@gmail.com"
+            class="px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:border-brand text-xs font-mono transition-colors flex items-center gap-1.5">
+            <i class="fa-regular fa-envelope"></i> acostamatias.1989@gmail.com
           </a>
 
           <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/acostamati" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg border border-slate-300 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:border-brand hover:text-brand transition-colors" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/acostamati" target="_blank" rel="noopener noreferrer"
+            class="w-8 h-8 rounded-lg border border-slate-300 dark:border-slate-700 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:border-brand hover:text-brand transition-colors"
+            title="LinkedIn">
             <i class="fa-brands fa-linkedin-in text-xs"></i>
           </a>
         </div>
       </div>
 
       <!-- Repositorios Asociados -->
-      <div class="p-3 rounded-lg bg-slate-100/60 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 text-xs flex flex-wrap items-center justify-between gap-2">
-        <span class="font-mono text-slate-500 dark:text-slate-400" data-i18n="text_repos">Repositorios &amp; Cuentas GitHub:</span>
+      <div
+        class="p-3 rounded-lg bg-slate-100/60 dark:bg-slate-900/40 border border-slate-200 dark:border-slate-800 text-xs flex flex-wrap items-center justify-between gap-2">
+        <span class="font-mono text-slate-500 dark:text-slate-400" data-i18n="text_repos">Repositorios &amp; Cuentas
+          GitHub:</span>
         <div class="flex items-center gap-3 font-mono text-[11px]">
           <a href="https://github.com/acostamatt" target="_blank" class="hover:text-brand flex items-center gap-1">
             <i class="fa-brands fa-github"></i> acostamatt (Personal)
-          </a>
-          <span class="text-slate-400">&bull;</span>
-          <a href="https://github.com/CoopTera/" target="_blank" class="hover:text-brand flex items-center gap-1">
-            <i class="fa-brands fa-github"></i> CoopTera (Cooperativa)
           </a>
           <span class="text-slate-400">&bull;</span>
           <a href="https://github.com/acosta4038" target="_blank" class="hover:text-brand flex items-center gap-1">
@@ -584,7 +701,8 @@
 
   <!-- ==================== MODAL TÉCNICO ==================== -->
   <div id="techModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="w-full max-w-lg rounded-xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 p-5 space-y-3 shadow-xl">
+    <div
+      class="w-full max-w-lg rounded-xl bg-white dark:bg-[#111726] border border-slate-200 dark:border-slate-800 p-5 space-y-3 shadow-xl">
       <div class="flex items-center justify-between">
         <h4 id="modalTitle" class="font-bold text-slate-900 dark:text-white text-sm">Detalles</h4>
         <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
@@ -593,7 +711,8 @@
       </div>
       <p id="modalDesc" class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed"></p>
       <div class="pt-2 flex justify-end">
-        <button onclick="closeModal()" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200">Cerrar</button>
+        <button onclick="closeModal()"
+          class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200">Cerrar</button>
       </div>
     </div>
   </div>
@@ -820,4 +939,5 @@
     setLanguage(currentLang);
   </script>
 </body>
+
 </html>
